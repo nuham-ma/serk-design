@@ -1,0 +1,414 @@
+<USER_REQUEST>
+SERK DESIGN BY MERON — LANDING PAGE REBUILD PROMPT
+You are helping me build a polished speculative landing page for Serk Design by Meron as part of the Possible Technology P.L.C. speculative landing-page internship program.
+This is speculative work / a warm demo, not a commissioned website. The page must never imply that Serk Design by Meron hired or commissioned us.
+I will upload the business photos separately. Use the uploaded photos as the primary visual assets. Do not replace them with unrelated AI-generated images or generic stock photos unless absolutely necessary.
+1. IMPORTANT PROJECT GOALS
+Build a:
+Beautiful
+Premium
+Creative
+Modern
+Mobile-first
+Fully responsive
+Bilingual Amharic + English
+Fast-loading
+Professionally animated
+landing page for Serk Design by Meron.
+The design must feel specifically created for a fashion/design/clothing brand, not like a generic business template.
+The page should demonstrate what a professional website could look like for the business.
+2. PUBLIC BUSINESS INFORMATION
+Business name:
+Serk Design by Meron
+Use the business's existing public branding and logo from the assets I provide.
+Public social links:
+Telegram:
+https://t.me/serkdesign
+Instagram:
+https://www.instagram.com/serk_design06/
+TikTok:
+https://vm.tiktok.com/ZS9BqV9pWhcr1-RtHPD/
+IMPORTANT:
+Preserve these links correctly.
+Make social icons clickable.
+Do not invent additional social accounts.
+Do not invent an email address.
+Do not invent a phone number.
+Do not invent an address.
+Do not invent opening hours.
+Do not invent prices.
+Do not invent awards, certifications, achievements, testimonials, or business claims.
+If information is not available from the supplied/public material, leave it out rather than making it up.
+3. BRAND SNAPSHOT MUST BE REFLECTED IN THE DESIGN
+Before building the final page, inspect the supplied photos, logo, and public social-media branding and establish the visual identity.
+Determine:
+Main brand colors
+Secondary/accent colors
+Typography direction
+Photography style
+Fashion/design aesthetic
+Overall brand personality
+Main products/services visible from the provided material
+Do not create a generic purple/blue startup website.
+The design should clearly communicate:
+Fashion + creativity + craftsmanship + Ethiopian/local identity + modern design
+only where these characteristics are actually supported by the public material/assets.
+Use the actual logo prominently and correctly.
+Do not distort, stretch, recolor, or redesign the logo unless necessary for contrast.
+4. USE THE UPLOADED PHOTOS INTELLIGENTLY
+I will upload photos.
+After I upload them:
+Inspect every image.
+Identify what each image shows.
+Choose the strongest image for the hero section.
+Use other images in appropriate sections.
+Create a visually interesting fashion gallery.
+Crop images responsively without destroying important details.
+Use proper object positioning.
+Optimize image loading.
+Use lazy loading where appropriate.
+Avoid displaying the same image repeatedly unless there is a strong design reason.
+The photography should be one of the main visual elements of the website.
+5. CREATIVE DESIGN — VERY IMPORTANT
+The internship feedback specifically requires creativity.
+Do NOT create:
+Generic hero + three cards + generic footer
+Generic SaaS design
+Generic restaurant template
+Plain text sections with no visual identity
+Excessive rounded cards
+Excessive gradients
+Random animations
+Unnecessary glassmorphism
+Instead, make the website feel like a real fashion/design brand.
+Possible creative elements include:
+Editorial-style typography
+Fashion magazine-inspired layouts
+Large photography
+Asymmetric image compositions
+Elegant image reveals
+Fabric-inspired visual transitions
+Subtle stitching/seam motifs
+Clothing/fashion-inspired decorative details
+Layered photography Editorial section headings
+Sophisticated hover effects
+Smooth image transitions
+Subtle scroll-based movement
+Beautiful whitespace
+Full-width visual sections
+Carefully designed typography hierarchy
+Use imagination, but keep everything elegant and professional.
+Do NOT add decorative elements just for the sake of animation.
+6. PAGE STRUCTURE
+Build the page approximately in this order:
+NAVIGATION
+Include:
+Serk Design by Meron logo
+Navigation links
+Home
+About
+Collections / Designs
+Gallery
+Contact
+Also include:
+AM | EN
+language toggle.
+The navbar must work perfectly on mobile.
+On mobile, use a clean hamburger menu.
+
+HERO SECTION
+Create a visually striking fashion-focused hero.
+Use the strongest uploaded image.
+Include:
+Brand name
+Short, accurate headline
+Short supporting description
+Primary CTA
+Secondary CTA if appropriate
+Do not write exaggerated claims.
+The hero should immediately communicate that this is a fashion/design business.
+Add subtle entrance animation.
+Do not make the hero excessively tall on mobile.
+
+BRAND / ABOUT SECTION
+Introduce Serk Design by Meron using only information supported by the public material and uploaded assets.
+Make this section visually interesting rather than a large paragraph.
+Possible layout:
+Text on one side + fashion image on the other.
+Use editorial typography and subtle reveal animations.
+
+COLLECTIONS / PRODUCTS / SERVICES
+Use the actual products/designs visible in the supplied photos and public content.
+Do not invent product categories.
+If the supplied content supports categories, present the strongest 3–6 categories.
+Each item should have:
+Image
+Name/category
+Short description
+Keep descriptions concise and factual.
+If exact product names are unknown, use safe descriptive labels instead of inventing names.
+For example:
+Featured Design
+Traditional-Inspired Design
+Contemporary Design
+only when visually supported.
+
+FEATURED DESIGNS
+Create a visually rich section showing the strongest uploaded designs.
+Use a fashion editorial layout rather than basic cards.
+Possible layout:
+Large featured image + smaller supporting images.
+Add hover effects that are subtle and elegant.
+
+GALLERY
+Create a beautiful responsive gallery from the uploaded photos.
+Desktop:
+Use an editorial/masonry-style composition where appropriate.
+Mobile:
+Use a clean single-column or carefully structured grid.
+Images must never overflow the screen.
+Clicking/tapping an image can open a lightweight image viewer if useful.
+
+SOCIAL PROOF
+ONLY include genuine public reviews/testimonials if I provide verified review text.
+Never fabricate testimonials.
+If verified reviews are unavailable, replace this section with:
+“Follow the latest designs”
+and link to the public Instagram/TikTok/Telegram pages.
+This is preferable to fake testimonials.
+
+SOCIAL MEDIA SECTION
+Create a visually attractive social-media CTA.
+Include:
+Instagram → https://www.instagram.com/serk_design06/
+TikTok → https://vm.tiktok.com/ZS9BqV9pWhcr1-RtHPD/
+Telegram → https://t.me/serkdesign
+Use recognizable icons.
+Make the entire buttons/cards clickable.
+Do not embed social feeds if doing so makes the page slow or unreliable.
+
+CONTACT / CTA
+Create a strong final CTA.
+Because we do not have verified phone/email/address information, do not invent contact details.
+Use the verified social channels instead.
+For example:
+“Discover the latest designs”
+with buttons for:
+Instagram
+TikTok
+Telegram
+If I provide additional verified contact information later, add it accurately.
+
+7. MAP REQUIREMENT
+I want a map section for Serk Design by Meron.
+IMPORTANT:
+Do not invent the business's location.
+First inspect the public information/assets available in the project and the information I provide.
+If a verified physical address/location is available, add a responsive map centered on that exact location.The map must:
+Work on desktop
+Work on mobile
+Have appropriate height on mobile
+Not overflow horizontally
+Include a clear location marker
+Have a button such as “Open in Google Maps” if a verified Google Maps location/link is available
+If there is no verified physical location, do not guess coordinates or place the business somewhere randomly.
+Instead create a location/contact section that can easily accept the verified map location later.
+8. BILINGUAL REQUIREMENT
+The default language should be Amharic.
+Include an English/Amharic toggle.
+Requirements:
+Amharic must use Noto Sans Ethiopic or another proper Ethiopic font.
+English must have an appropriate Latin font.
+Both versions must look professionally designed.
+Do not simply machine-translate everything and assume it is correct.
+Keep translations short and natural.
+I will personally review the Amharic wording.
+Store all text in a structured data object/file such as:
+{
+en: {...},
+am: {...}
+}
+Do NOT duplicate hardcoded text throughout components.
+The toggle must work without reloading the page.
+Save the selected language in localStorage if appropriate.
+9. ANIMATION
+Use subtle professional animation.
+Recommended:
+Fade-up section reveals
+Image reveal animations
+Smooth hover effects
+Button micro-interactions
+Navbar transition
+Gentle image movement
+Smooth scrolling
+Do NOT use:
+Excessive bouncing
+Constant spinning
+Flashing elements
+Heavy parallax everywhere
+Animations that make mobile scrolling slow
+Animations that interfere with reading
+Respect:
+prefers-reduced-motion
+for accessibility.
+If using React, Framer Motion is acceptable.
+10. MOBILE-FIRST REQUIREMENT — VERY IMPORTANT
+This project will be judged on an actual mobile phone.
+Do NOT consider the website finished after checking desktop.
+Test at minimum:
+320px
+375px
+390px
+414px
+Tablet
+Desktop
+Pay particular attention to:
+Navbar
+Hero image
+Typography
+Buttons
+Gallery
+Map
+Social buttons
+Footer
+Amharic text
+Horizontal overflow
+There must be NO horizontal scrolling.
+Every image must fit correctly.
+Buttons must be easy to tap.
+Text must remain readable.
+Do not use desktop-sized typography on mobile.
+11. PERFORMANCE
+Optimize the page for mobile.
+Requirements:
+Compress images
+Use modern image formats where practical
+Lazy-load non-critical images
+Avoid unnecessary libraries
+Avoid huge background videos
+Minimize JavaScript
+Keep animations lightweight
+Optimize fonts
+Avoid layout shifts
+The page should feel fast on a normal mobile connection.
+12. ACCESSIBILITY
+Include:
+Proper semantic HTML
+Alt text for meaningful images
+Keyboard navigation
+Visible focus states
+Accessible buttons
+Accessible language toggle
+Sufficient text contrast
+Reduced-motion support
+13. FOOTER
+Create a professional footer.
+Include:
+Serk Design by Meron
+Social links:
+Instagram
+TikTok
+Telegram
+Also include a small transparent attribution:
+Speculative concept by Possible Technology P.L.C.
+IMPORTANT:
+Do not make it look as though Possible Technology P.L.C. is the owner of Serk Design by Meron.
+It must clearly be an attribution for the speculative concept/demo.
+14. TECHNICAL REQUIREMENTS
+Use:
+React
+Vite
+Modern CSS / Tailwind if already configured
+Responsive design
+Component-based structure
+Keep the project organized.
+Suggested structure:
+src/
+components/
+data/
+assets/
+App.jsx
+main.jsx
+Keep business content separate from UI components.
+For example:
+src/data/serkData.js
+should contain bilingual content and verified business information.
+15. DO NOT INVENT INFORMATION
+This is one of the most important requirements.
+Never invent:
+Reviews
+Customer names
+Phone numbers
+Addresses
+Prices
+Opening hours
+Awards
+Certifications
+Number of years in business
+Number of customers
+Branches
+Employees
+Product names
+Materials
+Guarantees
+Claims
+If information cannot be verified from the supplied public information, leave it out.Quality and accuracy are more important than filling every section.
+16. FINAL QUALITY CHECK
+Before considering the project finished, verify:
+[ ] Business branding is visible
+[ ] Logo is correctly used
+[ ] Brand colors match the real brand
+[ ] Uploaded photos are used effectively
+[ ] Design clearly feels fashion/design-specific
+[ ] No generic template appearance
+[ ] Amharic is the default language
+[ ] English/Amharic toggle works
+[ ] Amharic uses an Ethiopic-compatible font
+[ ] Amharic text is visually checked
+[ ] No fake testimonials
+[ ] No invented business information
+[ ] Social links work
+[ ] Map uses only verified location information
+[ ] Mobile layout works
+[ ] No horizontal scrolling
+[ ] Desktop layout works
+[ ] Images are optimized
+[ ] Animations are subtle
+[ ] Accessibility basics are implemented
+[ ] Footer includes Possible Technology P.L.C. attribution
+[ ] Footer does not imply commissioning
+[ ] The page loads quickly
+[ ] All buttons and links work
+17. MOST IMPORTANT INSTRUCTION
+Do not just generate the page and stop.
+After building it, inspect your own result critically.
+Ask:
+“Does this look like a generic AI-generated landing page, or does it look specifically designed for Serk Design by Meron?”
+If it looks generic, improve:
+Typography
+Layout
+Photography
+Fashion-specific details
+Spacing
+Brand colors
+Animation
+Section transitions
+Mobile experience
+Content quality
+The final result should look like a polished agency-designed fashion landing page that could realistically be shown to the business owner as a professional speculative demo.
+I will upload the photos now. Use those assets carefully and build around them.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-03T09:35:47+03:00.
+
+The user has uploaded 5 image(s):
+- C:/Users/DELLL/.gemini/antigravity/brain/d184cc7a-3773-4158-b9dc-8139df516308/.user_uploaded/media_1788417286064.jpg
+- C:/Users/DELLL/.gemini/antigravity/brain/d184cc7a-3773-4158-b9dc-8139df516308/.user_uploaded/media_1788417295451.jpg
+- C:/Users/DELLL/.gemini/antigravity/brain/d184cc7a-3773-4158-b9dc-8139df516308/.user_uploaded/media_1788417307136.jpg
+- C:/Users/DELLL/.gemini/antigravity/brain/d184cc7a-3773-4158-b9dc-8139df516308/.user_uploaded/media_1788417318055.jpg
+- C:/Users/DELLL/.gemini/antigravity/brain/d184cc7a-3773-4158-b9dc-8139df516308/.user_uploaded/media_1788417345329.jpg
+You can embed these images in an artifact if you need the USER to review them.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.8 Flash (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
