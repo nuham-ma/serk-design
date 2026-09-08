@@ -1,9 +1,10 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { lookbookItems } from '../data/serkData';
-import { Eye, Sparkles } from 'lucide-react';
+import { Eye, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, setActiveCategory }) {
   const [filter, setFilter] = useState(activeCategory || 'all');
+  const scrollContainerRef = useRef(null);
 
   // Keep internal filter synced if parent passes activeCategory
   React.useEffect(() => {
@@ -22,33 +23,59 @@ export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, 
 
   const filteredItems = useMemo(() => {
     if (filter === 'all') return lookbookItems;
-    if (filter === 'men') {
-      return lookbookItems.filter(item => item.category === 'men' || item.category === 'couples');
-    }
     return lookbookItems.filter(item => item.category === filter);
   }, [filter]);
 
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = direction === 'left' ? -340 : 340;
+      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="lookbook" className="py-24 bg-[#121214] relative">
+    <section id="lookbook" className="py-20 bg-[#08221D] relative overflow-hidden">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-gold">
-            <Sparkles size={14} />
-            <span>{t.lookbook.eyebrow}</span>
+        {/* Section Heading with Carousel Navigation Controls */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div className="space-y-2 text-left">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-serk-gold">
+              <Sparkles size={14} />
+              <span>{t.lookbook.eyebrow}</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#FDF3E5]">
+              {t.lookbook.title}
+            </h2>
+            <p className="text-xs sm:text-sm text-[#FDF3E5]/70 font-light max-w-xl">
+              {t.lookbook.subtitle}
+            </p>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#FAF8F5]">
-            {t.lookbook.title}
-          </h2>
-          <p className="text-sm sm:text-base text-[#FAF8F5]/70 font-light">
-            {t.lookbook.subtitle}
-          </p>
+
+          {/* Left / Right Scroll Buttons */}
+          <div className="flex items-center gap-2 self-start md:self-auto">
+            <button
+              type="button"
+              onClick={() => scroll('left')}
+              className="w-10 h-10 rounded-full bg-[#0D2F28] border border-serk-border hover:border-serk-gold text-serk-gold flex items-center justify-center transition-all active:scale-95 shadow-md focus:outline-none focus:ring-2 focus:ring-serk-gold"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              type="button"
+              onClick={() => scroll('right')}
+              className="w-10 h-10 rounded-full bg-[#0D2F28] border border-serk-border hover:border-serk-gold text-serk-gold flex items-center justify-center transition-all active:scale-95 shadow-md focus:outline-none focus:ring-2 focus:ring-serk-gold"
+              aria-label="Scroll right"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex items-center justify-center flex-wrap gap-2 mb-12">
+        <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-2 mb-8 pb-1">
           {filterTabs.map(tab => (
             <button
               key={tab.key}
@@ -57,10 +84,10 @@ export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, 
                 setFilter(tab.key);
                 if (setActiveCategory) setActiveCategory(tab.key);
               }}
-              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
+              className={`px-4 py-1.5 rounded-full text-xs font-medium shrink-0 transition-all ${
                 filter === tab.key
-                  ? 'bg-gold text-[#121214] font-bold shadow-lg shadow-gold/20'
-                  : 'bg-[#1A1C22] text-[#FAF8F5]/70 hover:text-[#FAF8F5] border border-white/10 hover:border-gold/30'
+                  ? 'bg-serk-gold text-[#08221D] font-bold shadow-md'
+                  : 'bg-[#0D2F28] text-[#FDF3E5]/70 hover:text-[#FDF3E5] border border-serk-border hover:border-serk-gold/40'
               }`}
             >
               {tab.label}
@@ -68,12 +95,15 @@ export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, 
           ))}
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Single Horizontal Row Carousel */}
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-5 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar py-2 px-1"
+        >
           {filteredItems.map((item, index) => (
             <div
               key={item.id}
-              className="group relative bg-[#1A1C22] rounded-2xl overflow-hidden border border-gold/20 hover:border-gold transition-all duration-300 shadow-xl cursor-pointer flex flex-col"
+              className="w-[270px] sm:w-[300px] shrink-0 snap-start group relative bg-[#0D2F28] rounded-2xl overflow-hidden border border-serk-border hover:border-serk-gold transition-all duration-300 shadow-xl cursor-pointer flex flex-col"
               onClick={() => onOpenModal({
                 id: item.id,
                 image: item.image,
@@ -83,45 +113,45 @@ export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, 
                 category: item.category,
               })}
             >
-              {/* Image Container with Aspect Ratio */}
+              {/* Image Container with Consistent Aspect Ratio */}
               <div className="relative aspect-[3/4] overflow-hidden bg-black/40">
                 <img
                   src={item.image}
                   alt={item.title[lang]}
                   className="w-full h-full object-cover object-top group-hover:scale-106 transition-transform duration-700 ease-out"
-                  loading={index < 6 ? "eager" : "lazy"}
+                  loading={index < 4 ? "eager" : "lazy"}
                 />
 
-                {/* Gradient Shadow Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121214] via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                {/* Subtle Gradient Shadow */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D2F28] via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
 
                 {/* Floating Badge */}
-                <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#121214]/85 backdrop-blur-md border border-gold/30 text-[10px] uppercase font-bold text-gold tracking-wider shadow">
+                <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#08221D]/90 backdrop-blur-md border border-serk-gold/40 text-[10px] uppercase font-bold text-serk-gold tracking-wider shadow">
                   {item.badge[lang]}
                 </div>
 
-                {/* Hover Eye Icon overlay */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/25 backdrop-blur-[2px]">
-                  <div className="w-12 h-12 rounded-full bg-gold/90 text-[#121214] flex items-center justify-center shadow-xl transform scale-75 group-hover:scale-100 transition-transform">
-                    <Eye size={22} />
+                {/* Hover Eye Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/30 backdrop-blur-[1px]">
+                  <div className="w-11 h-11 rounded-full bg-serk-gold text-[#08221D] flex items-center justify-center shadow-xl transform scale-75 group-hover:scale-100 transition-transform">
+                    <Eye size={20} />
                   </div>
                 </div>
               </div>
 
               {/* Text Information Box */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-2 bg-gradient-to-b from-[#1A1C22] to-[#14151A]">
+              <div className="p-4 flex-1 flex flex-col justify-between space-y-2 bg-[#0D2F28]">
                 <div>
-                  <h3 className="text-base sm:text-lg font-bold text-[#FAF8F5] group-hover:text-gold transition-colors font-serif">
+                  <h3 className="text-sm sm:text-base font-bold text-[#FDF3E5] group-hover:text-serk-gold transition-colors font-serif truncate">
                     {item.title[lang]}
                   </h3>
-                  <p className="text-xs text-[#FAF8F5]/70 mt-1 font-light leading-relaxed">
+                  <p className="text-[11px] text-[#FDF3E5]/70 mt-1 font-light line-clamp-2 leading-relaxed">
                     {item.subtitle[lang]}
                   </p>
                 </div>
 
-                <div className="pt-2 flex items-center justify-between text-[11px] font-mono text-gold/80 border-t border-white/5">
+                <div className="pt-2 flex items-center justify-between text-[10px] font-mono text-serk-gold/80 border-t border-serk-border">
                   <span className="uppercase">{item.category}</span>
-                  <span className="group-hover:text-gold transition-colors flex items-center gap-1 font-sans font-medium">
+                  <span className="group-hover:text-serk-gold transition-colors flex items-center gap-1 font-sans font-medium">
                     {t.lookbook.viewDetails} &rarr;
                   </span>
                 </div>
@@ -129,6 +159,11 @@ export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, 
 
             </div>
           ))}
+        </div>
+
+        {/* Swipe / Scroll Hint */}
+        <div className="mt-4 flex items-center justify-center text-[11px] text-serk-gold/60 font-mono tracking-wider uppercase">
+          <span>&larr; {lang === 'am' ? 'በአግድም ያሸብልሉ' : 'Scroll horizontally to view more'} &rarr;</span>
         </div>
 
       </div>

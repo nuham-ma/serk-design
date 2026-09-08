@@ -35,7 +35,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#121214] text-[#FAF8F5] overflow-x-hidden flex flex-col font-sans">
+    <div className="min-h-screen bg-[#08221D] text-[#FDF3E5] overflow-x-hidden flex flex-col font-sans selection:bg-serk-gold/30 selection:text-white">
       <Navbar lang={lang} setLang={setLang} t={t} />
       
       <main className="flex-grow">

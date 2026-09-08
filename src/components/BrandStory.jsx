@@ -1,68 +1,73 @@
 import React from 'react';
-import { Scissors, Sparkles, HeartHandshake, CheckCircle2 } from 'lucide-react';
+import { Scissors, Sparkles, ShoppingBag, CheckCircle2 } from 'lucide-react';
 
 export default function BrandStory({ t, lang, onOpenModal }) {
-  const icons = [Scissors, Sparkles, HeartHandshake];
+  const icons = [Scissors, ShoppingBag, Sparkles];
 
   return (
-    <section id="story" className="py-20 bg-[#0E0F12] relative overflow-hidden border-t border-b border-gold/15">
+    <section id="story" className="py-24 bg-[#051815] relative overflow-hidden border-t border-b border-serk-border">
       
       {/* Background Subtle Accent */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-serk-gold/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           
-          {/* Left Column: Visual Showcase (5 cols) */}
-          <div className="lg:col-span-5 order-2 lg:order-1">
-            <div className="grid grid-cols-2 gap-4">
+          {/* Left Column: Larger, Visually Prominent Imagery (6 cols) */}
+          <div className="lg:col-span-6 order-2 lg:order-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
               
-              {/* Showroom Reception Wall with Gold Logo */}
+              {/* Image 1: High-Res Studio Portrait (Hands on Hips / Terracotta Arch) */}
               <div 
-                className="relative rounded-2xl overflow-hidden aspect-[3/4] border border-gold/30 group cursor-pointer shadow-xl"
+                className="relative rounded-2xl overflow-hidden aspect-[3/4.2] border-2 border-serk-gold/30 group cursor-pointer shadow-2xl bg-[#0D2F28]"
+                onClick={() => onOpenModal({
+                  id: "hero_portrait_alt",
+                  image: "/images/fashion/hero_portrait_alt.jpg",
+                  title: lang === 'am' ? "የሰርክ ዲዛይን ስቱዲዮ ንድፍ" : "Serk Design Studio Silhouette",
+                  subtitle: lang === 'am' ? "ዘመናዊ አቆራረጥ ከጥንታዊ የኢትዮጵያ ጥበብ ጋር" : "Contemporary cut harmonized with Ethiopian weaving heritage",
+                })}
+              >
+                <img
+                  src="/images/fashion/hero_portrait_alt.jpg"
+                  alt="Serk Design Studio Model"
+                  className="w-full h-full object-cover object-top group-hover:scale-106 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#051815]/90 via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className="text-[10px] font-mono text-serk-gold uppercase tracking-widest block font-bold">
+                    Couture Line
+                  </span>
+                  <span className="text-sm font-semibold text-white">
+                    {lang === 'am' ? 'የሰርክ ልዩ ዲዛይን' : 'Signature Silhouette'}
+                  </span>
+                </div>
+              </div>
+
+              {/* Image 2: Boutique Showroom & Reception with Actual Logo Wall */}
+              <div 
+                className="relative rounded-2xl overflow-hidden aspect-[3/4.2] border-2 border-serk-gold/30 group cursor-pointer shadow-2xl bg-[#0D2F28] sm:translate-y-6"
                 onClick={() => onOpenModal({
                   id: "serk_reception_gold_logo_wall",
                   image: "/images/fashion/serk_reception_gold_logo_wall.jpg",
-                  title: lang === 'am' ? "የሰርክ ቡቲክ አቀባበል" : "Serk Boutique Reception",
-                  subtitle: lang === 'am' ? "የወርቅ ማዕረግ ሎጎ በሰርክ ማሳያ አዳራሽ" : "Gilded brand emblem in the Serk showroom",
+                  title: lang === 'am' ? "የሰርክ ቡቲክ ማሳያ አዳራሽ" : "Serk Showroom & Reception",
+                  subtitle: lang === 'am' ? "የወርቅ ማዕረግ ሎጎ በሰርክ ማሳያ አዳራሽ" : "Official Serk showroom reception in Addis Ababa",
                 })}
               >
                 <img
                   src="/images/fashion/serk_reception_gold_logo_wall.jpg"
                   alt="Serk Design Showroom Reception"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="text-[11px] font-mono text-gold uppercase tracking-wider block">Boutique</span>
-                  <span className="text-xs font-semibold text-white">
-                    {lang === 'am' ? 'የሰርክ ማሳያ አዳራሽ' : 'Serk Showroom'}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#051815]/90 via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className="text-[10px] font-mono text-serk-gold uppercase tracking-widest block font-bold">
+                    Showroom
                   </span>
-                </div>
-              </div>
-
-              {/* Kemis with Mesob Art & Traditional Craftsmanship */}
-              <div 
-                className="relative rounded-2xl overflow-hidden aspect-[3/4] border border-gold/30 group cursor-pointer shadow-xl translate-y-6"
-                onClick={() => onOpenModal({
-                  id: "serk_boutique_bronze_hem_mesob",
-                  image: "/images/fashion/serk_boutique_bronze_hem_mesob.jpg",
-                  title: lang === 'am' ? "የባህል ልብስና መሶብ" : "Habesha Kemis & Mesob Setting",
-                  subtitle: lang === 'am' ? "በባህላዊ ጌጣጌጥ የተዋበ የሀበሻ ቀሚስ" : "Handwoven Kemis in authentic Ethiopian cultural setting",
-                })}
-              >
-                <img
-                  src="/images/fashion/serk_boutique_bronze_hem_mesob.jpg"
-                  alt="Serk Design Kemis with Mesob"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="text-[11px] font-mono text-gold uppercase tracking-wider block">Heritage</span>
-                  <span className="text-xs font-semibold text-white">
-                    {lang === 'am' ? 'የሀበሻ ባህል ጥበብ' : 'Ethiopian Heritage'}
+                  <span className="text-sm font-semibold text-white">
+                    {lang === 'am' ? 'የሰርክ ማሳያ አዳራሽ' : 'Boutique Showroom'}
                   </span>
                 </div>
               </div>
@@ -70,42 +75,42 @@ export default function BrandStory({ t, lang, onOpenModal }) {
             </div>
           </div>
 
-          {/* Right Column: Editorial Text & Pillars (7 cols) */}
-          <div className="lg:col-span-7 order-1 lg:order-2 space-y-6 text-left">
+          {/* Right Column: Editorial Text & Prominent Pillars (6 cols) */}
+          <div className="lg:col-span-6 order-1 lg:order-2 space-y-6 text-left">
             
             <div className="space-y-2">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold block">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-serk-gold block">
                 {t.brandStory.eyebrow}
               </span>
-              <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#FAF8F5] leading-tight">
+              <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#FDF3E5] leading-tight">
                 {t.brandStory.title}
               </h2>
             </div>
 
-            <p className="text-[#FAF8F5]/80 text-base leading-relaxed font-light">
+            <p className="text-[#FDF3E5]/85 text-base leading-relaxed font-light">
               {t.brandStory.p1}
             </p>
 
-            <p className="text-[#FAF8F5]/80 text-base leading-relaxed font-light">
+            <p className="text-[#FDF3E5]/80 text-base leading-relaxed font-light">
               {t.brandStory.p2}
             </p>
 
             {/* 3 Core Value Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-3">
               {t.brandStory.pillars.map((pillar, idx) => {
                 const Icon = icons[idx] || Sparkles;
                 return (
                   <div 
                     key={idx} 
-                    className="p-4 rounded-xl bg-[#16181E] border border-gold/20 hover:border-gold/50 transition-colors flex flex-col space-y-2"
+                    className="p-4 rounded-xl bg-[#0D2F28] border border-serk-border hover:border-serk-gold/60 transition-colors flex flex-col space-y-2"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-gold/15 flex items-center justify-center text-gold">
+                    <div className="w-8 h-8 rounded-lg bg-serk-gold/15 flex items-center justify-center text-serk-gold">
                       <Icon size={16} />
                     </div>
-                    <h3 className="text-sm font-bold text-[#FAF8F5]">
+                    <h3 className="text-sm font-bold text-[#FDF3E5]">
                       {pillar.title}
                     </h3>
-                    <p className="text-xs text-[#FAF8F5]/70 leading-relaxed font-light">
+                    <p className="text-xs text-[#FDF3E5]/70 leading-relaxed font-light">
                       {pillar.desc}
                     </p>
                   </div>
