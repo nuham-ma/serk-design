@@ -36,7 +36,7 @@ export default function Hero({ t, lang, onOpenModal }) {
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-[#FDF3E5]/80 max-w-xl leading-relaxed font-light">
+            <p className="text-base sm:text-lg text-[#FDF3E5]/85 max-w-xl leading-relaxed font-light">
               {t.hero.description}
             </p>
 
@@ -61,7 +61,7 @@ export default function Hero({ t, lang, onOpenModal }) {
               </a>
 
               <a
-                href={`tel:${verifiedSocials.phone}`}
+                href={`tel:${verifiedSocials.phoneRaw}`}
                 className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-[#08221D] border border-serk-border text-serk-gold text-sm font-mono font-bold hover:border-serk-gold transition-colors"
                 title="Call hotline"
               >
@@ -77,7 +77,7 @@ export default function Hero({ t, lang, onOpenModal }) {
                   <span className="text-lg sm:text-2xl font-bold font-serif text-serk-gold">
                     {stat.value}
                   </span>
-                  <span className="text-xs text-[#FDF3E5]/70 font-light mt-0.5 leading-tight">
+                  <span className="text-xs sm:text-sm text-[#FDF3E5]/75 font-light mt-0.5 leading-tight">
                     {stat.label}
                   </span>
                 </div>
@@ -95,21 +95,21 @@ export default function Hero({ t, lang, onOpenModal }) {
               <div 
                 className="relative w-full h-full rounded-xl overflow-hidden cursor-pointer group bg-black/40"
                 onClick={() => onOpenModal({
-                  id: "hero_portrait_highres",
-                  image: "/images/fashion/hero_portrait_highres.jpg",
-                  title: lang === 'am' ? "ኦሊቭ ኮርሴት ዘመናዊ የሀበሻ ቀሚስ" : "Olive Corset Couture Kemis",
+                  id: "hero_emerald_gown",
+                  image: "/images/fashion/hero_emerald_gown.jpg",
+                  title: lang === 'am' ? "ኤመራልድ ግሪንና ወርቅ ፍሌር ቀሚስ" : "Emerald Green & Gold Bell Flare Kemis",
                   subtitle: lang === 'am' ? "በሰርክ ዲዛይን በሜሮን የተዘጋጀ ከፍተኛ ጥራት ያለው የባህል ዲዛይን" : "High-resolution signature design by Serk Design by Meron",
                 })}
               >
                 <img
-                  src="/images/fashion/hero_portrait_highres.jpg"
-                  alt="Serk Design Couture Kemis"
+                  src="/images/fashion/hero_emerald_gown.jpg"
+                  alt="Serk Design Emerald Couture Kemis"
                   className="w-full h-full object-cover object-top group-hover:scale-104 transition-transform duration-700 ease-out"
                   loading="eager"
                 />
 
-                {/* Subtle Gradient Shadow */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#08221D] via-transparent to-black/10 opacity-70 group-hover:opacity-50 transition-opacity"></div>
+                {/* Subtle, Minimal Gradient Shadow at the Very Bottom Only */}
+                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#08221D]/90 via-[#08221D]/40 to-transparent"></div>
 
                 {/* Floating Bottom Card */}
                 <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-[#08221D]/90 backdrop-blur-md border border-serk-gold/30 flex items-center justify-between shadow-xl">
@@ -117,11 +117,11 @@ export default function Hero({ t, lang, onOpenModal }) {
                     <span className="text-[11px] font-bold text-serk-gold uppercase tracking-wider block">
                       {lang === 'am' ? 'የቅርብ ጊዜ ኮውቸር' : 'Couture Feature'}
                     </span>
-                    <span className="text-xs text-[#FDF3E5] font-medium">
-                      {lang === 'am' ? 'ኦሊቭ ኮርሴት እና የጥበብ ቀሚስ' : 'Olive Corset & Habesha Gown'}
+                    <span className="text-xs sm:text-sm text-[#FDF3E5] font-medium">
+                      {lang === 'am' ? 'ኤመራልድ ግሪንና ወርቅ ፍሌር ቀሚስ' : 'Emerald & Gold Bell Flare Gown'}
                     </span>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-serk-gold/20 border border-serk-gold/50 flex items-center justify-center text-serk-gold group-hover:bg-serk-gold group-hover:text-[#08221D] transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-serk-gold/20 border border-serk-gold/50 flex items-center justify-center text-serk-gold group-hover:bg-serk-gold group-hover:text-[#08221D] transition-colors shrink-0">
                     <Sparkles size={14} />
                   </div>
                 </div>

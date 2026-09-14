@@ -16,49 +16,51 @@ export default function Collections({ t, onSelectCategory }) {
           <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#FDF3E5]">
             {t.pillarsSection.title}
           </h2>
-          <p className="text-sm sm:text-base text-[#FDF3E5]/70 font-light">
+          <p className="text-sm sm:text-base text-[#FDF3E5]/75 font-light">
             {t.pillarsSection.subtitle}
           </p>
         </div>
 
-        {/* 4 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 3 Cards Grid (Serk Rental removed per user requirement) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {t.pillarsSection.cards.map((card, idx) => (
             <div
               key={idx}
               className="group relative bg-[#0D2F28] rounded-2xl overflow-hidden border border-serk-border hover:border-serk-gold transition-all duration-300 shadow-xl flex flex-col cursor-pointer hover:-translate-y-1"
               onClick={() => onSelectCategory(card.category)}
             >
-              {/* Image Container */}
+              {/* Image Container with subtle minimal overlay at the very bottom only */}
               <div className="relative aspect-[4/5] overflow-hidden bg-black/40">
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="w-full h-full object-cover object-top group-hover:scale-106 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D2F28] via-[#0D2F28]/30 to-transparent"></div>
+                
+                {/* Very subtle gradient limited only to the very bottom 10% (Requirement 9) */}
+                <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#0D2F28]/60 to-transparent"></div>
                 
                 {/* Category Pill */}
-                <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#08221D]/85 backdrop-blur-md border border-serk-gold/40 text-[10px] uppercase font-bold text-serk-gold tracking-wider">
+                <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#08221D]/90 backdrop-blur-md border border-serk-gold/40 text-[11px] uppercase font-bold text-serk-gold tracking-wider shadow-sm">
                   {card.category}
                 </div>
               </div>
 
-              {/* Text Body with Complete, Articulate Descriptions */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-[#FDF3E5] group-hover:text-serk-gold transition-colors font-serif leading-snug">
+              {/* Text Body with Complete, Clear Descriptions and Enhanced Typography */}
+              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <div className="space-y-2.5">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#FDF3E5] group-hover:text-serk-gold transition-colors font-serif leading-snug">
                     {card.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#FDF3E5]/75 font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#FDF3E5]/80 font-light leading-relaxed">
                     {card.desc}
                   </p>
                 </div>
 
-                <div className="pt-2 border-t border-serk-border flex items-center justify-between text-xs font-semibold text-serk-gold group-hover:underline">
-                  <span>Explore in Lookroom</span>
-                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                <div className="pt-3 border-t border-serk-border flex items-center justify-between text-xs sm:text-sm font-semibold text-serk-gold group-hover:underline">
+                  <span>{t.pillarsSection.exploreBtn || "Explore in Lookroom"}</span>
+                  <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
 

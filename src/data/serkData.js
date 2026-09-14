@@ -2,30 +2,58 @@ export const verifiedSocials = {
   telegram: "https://t.me/serkdesign",
   instagram: "https://www.instagram.com/serk_design06/",
   tiktok: "https://vm.tiktok.com/ZS9BqV9pWhcr1-RtHPD/",
-  phone: "0934179992",
-  phoneFormatted: "+251 93 417 9992",
-  googleMapsUrl: "https://maps.google.com/?q=Addis+Ababa+Ethiopia",
+  phone: "+251 93 417 9992",
+  phoneRaw: "+251934179992",
+  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Serk+Design+Meron+Addis+Ababa",
   locationName: {
-    am: "አዲስ አበባ፣ ኢትዮጵያ",
-    en: "Addis Ababa, Ethiopia",
+    am: "22 ባማ ሲቲ ሞል / ቦሌ፣ አዲስ አበባ",
+    en: "22 Bama City Mall / Bole, Addis Ababa",
   },
   established: "2020",
 };
 
 export const lookbookItems = [
   {
+    id: "hero_emerald_gown",
+    image: "/images/fashion/hero_emerald_gown.jpg",
+    category: "bridal",
+    title: {
+      am: "ኤመራልድ ግሪንና ወርቅ ፍሌር ቀሚስ",
+      en: "Emerald Green & Gold Bell Flare Kemis",
+    },
+    subtitle: {
+      am: "በደረትና በታችኛው ዳርቻ የተንቆጠቆጠ የባህል ጥልፍ ያረፈበት የክብር ቀሚስ",
+      en: "Regal bell flare gown adorned with handcrafted emerald and gold tilet",
+    },
+    badge: { am: "የሰርግ", en: "Bridal" }
+  },
+  {
+    id: "couples_attire_cultural",
+    image: "/images/fashion/couples_attire_cultural.jpg",
+    category: "men",
+    title: {
+      am: "የጥንዶች ተጣማሪ የሰርግ አልባሳት",
+      en: "Harmonized Wedding Couple's Attire",
+    },
+    subtitle: {
+      am: "በተመሳሳይ ወርቃማ ጥበብ የተዋበ የሙሽሪት ቀሚስ እና የወንድ ሸሚዝ ስብስብ",
+      en: "Elegantly coordinated bridal kemis and groom cultural tunic in matching gold tilet",
+    },
+    badge: { am: "የጥንዶች", en: "Couples" }
+  },
+  {
     id: "hero_portrait_highres",
     image: "/images/fashion/hero_portrait_highres.jpg",
     category: "fusion",
     title: {
       am: "ኦሊቭ ኮርሴት ዘመናዊ የሀበሻ ቀሚስ",
-      en: "Olive Corset Couture Kemis",
+      en: "Olive Corset Modern Couture",
     },
     subtitle: {
       am: "በወርቃማ ጥልፍ የተዋበ የታጠረ ኮርሴት እና ሰፊ ነጭ የሀበሻ ቀሚስ",
       en: "Structured olive corset with golden tilet detailing over an expansive ivory gown",
     },
-    badge: { am: "አዲስ ስብስብ", en: "New Collection" }
+    badge: { am: "ኮውቸር", en: "Couture" }
   },
   {
     id: "editorial_dramatic_habesha_wrap",
@@ -53,7 +81,7 @@ export const lookbookItems = [
       am: "የቀሚስና የልብስ ንድፍ ውህደት ከረጅም የኋላ ቱል ጋር",
       en: "Contemporary silhouette featuring structured mini and sweeping sheer train",
     },
-    badge: { am: "ኮውቸር", en: "Couture" }
+    badge: { am: "አዲስ ዲዛይን", en: "New Release" }
   },
   {
     id: "serk_rental_navy_velvet_kaftan",
@@ -126,34 +154,6 @@ export const lookbookItems = [
     badge: { am: "የወንዶች", en: "Men's" }
   },
   {
-    id: "men_rosegold_embroidery_suit",
-    image: "/images/fashion/men_rosegold_embroidery_suit.jpg",
-    category: "men",
-    title: {
-      am: "የወንዶች ሮዝ-ጎልድ ባህላዊ ሱፍ",
-      en: "Men's Rose-Gold Embroidered Suit",
-    },
-    subtitle: {
-      am: "በማንደሪን ኮላርና ረቂቅ የወርቅ ጥልፍ የተዘጋጀ ዘመናዊ ሸሚዝ",
-      en: "Refined mandarin collar shirt featuring rose-gold and bronze needlework",
-    },
-    badge: { am: "የወንዶች", en: "Men's" }
-  },
-  {
-    id: "kemis_event_ivory_gold",
-    image: "/images/fashion/kemis_event_ivory_gold.jpg",
-    category: "bridal",
-    title: {
-      am: "አይቮሪና ወርቅ የክብር ቀሚስ",
-      en: "Ivory & Gilded Event Kemis",
-    },
-    subtitle: {
-      am: "ለሰርግ፣ ለመልስ እና ለተከበሩ ዝግጅቶች የተዘጋጀ የጥበብ ስራ",
-      en: "Graceful flared silhouette with gilded neckline and fine netela",
-    },
-    badge: { am: "ክላሲክ", en: "Classic" }
-  },
-  {
     id: "serk_rental_ivory_offshoulder",
     image: "/images/fashion/serk_rental_ivory_offshoulder.jpg",
     category: "rental",
@@ -168,18 +168,18 @@ export const lookbookItems = [
     badge: { am: "ኪራይ", en: "Rental" }
   },
   {
-    id: "kemis_emerald_gold_flare",
-    image: "/images/fashion/kemis_emerald_gold_flare.jpg",
-    category: "bridal",
+    id: "serk_rental_yellow_tilet_dress",
+    image: "/images/fashion/serk_rental_yellow_tilet_dress.jpg",
+    category: "rental",
     title: {
-      am: "ኤመራልድ ግሪንና ወርቅ ፍሌር ቀሚስ",
-      en: "Emerald Green & Gold Flare Kemis",
+      am: "ወርቃማ ጥበብ የሰርክ ኪራይ ቀሚስ",
+      en: "Golden Tilet Serk Rental Gown",
     },
     subtitle: {
-      am: "ሰፊ የታችኛው ጥበብ ዳርቻ እና የደረት ጌጥ",
-      en: "Regal bell flare with rich emerald green and antique gold hem border",
+      am: "በደረትና በመሃል የወረደ ወርቃማ ጥበብ ያለው የኪራይ ቀሚስ",
+      en: "Radiant golden vertical embroidery gown available for boutique rental",
     },
-    badge: { am: "የሰርግ", en: "Bridal" }
+    badge: { am: "ኪራይ", en: "Rental" }
   }
 ];
 
@@ -200,7 +200,7 @@ export const content = {
       titleStart: "የባህል ጥበብና",
       titleHighlight: "ዘመናዊ ፋሽን",
       titleEnd: "ውህደት",
-      description: "በእጅ የተሸመኑ ውብ የኢትዮጵያ የባህል ቀሚሶች፣ የሙሽራና የዝግጅት አልባሳት፣ ዘመናዊ የባህል ውህደት ንድፎች፣ የወንዶች አልባሳት እና የሰርክ ኪራይ አገልግሎት።",
+      description: "በእጅ የተሸመኑ ውብ የኢትዮጵያ የባህል ቀሚሶች፣ የሙሽራና የዝግጅት አልባሳት፣ ዘመናዊ የባህል ውህደት ንድፎች፣ የወንዶችና የጥንዶች አልባሳት እንዲሁም የሰርክ ኪራይ አገልግሎት።",
       exploreBtn: "ስብስቦችን ይመልከቱ",
       telegramBtn: "በቴሌግራም ያግኙን",
       callBtn: "በቀጥታ ይደውሉ",
@@ -225,8 +225,8 @@ export const content = {
           desc: "ለሰርግ፣ ለምርቃትና ለፎቶ ቀረጻ የሚሆኑ የተመረጡ ባህላዊ ቀሚሶችን በኪራይ ያግኙ።"
         },
         {
-          title: "የወንዶች ባህላዊ አልባሳት",
-          desc: "በእጅ የተጠለፉ የወንዶች ሸሚዞችና ሮያል ቱኒኮች ለክብረ በዓልና ለሰርግ።"
+          title: "የወንዶችና ጥንዶች ዲዛይን",
+          desc: "የወንዶች ባህላዊ ሸሚዞችና ከተጣማሪዋ ጋር የተዋሃዱ የሰርግ አልባሳት።"
         }
       ]
     },
@@ -234,6 +234,7 @@ export const content = {
       eyebrow: "አገልግሎቶች",
       title: "በሰርክ ዲዛይን የሚዘጋጁ ስብስቦች",
       subtitle: "እያንዳንዱ ስራ በሜሮን የንድፍ ፈጠራና በተዋጣለት የልብስ ጥበብ የተዘጋጀ ነው።",
+      exploreBtn: "በLookroom ይመልከቱ",
       cards: [
         {
           title: "የሰርግና የክብር ቀሚሶች",
@@ -242,43 +243,37 @@ export const content = {
           category: "bridal",
         },
         {
-          title: "ሰርክ ኪራይ (Serk Rental)",
-          desc: "ለሰርግ፣ ለመልስ፣ ለምርቃትና ለፎቶ ቀረጻ የሚሆኑ የተመረጡና ጥራታቸውን የጠበቁ ባህላዊ ቀሚሶችን በቀላሉ ተከራይተው የሚደምቁበት አገልግሎት።",
-          image: "/images/fashion/serk_rental_navy_velvet_kaftan.jpg",
-          category: "rental",
-        },
-        {
           title: "ዘመናዊ የባህል ውህደት",
           desc: "የኢትዮጵያን ባህላዊ የሽመና ጥበብ ከዘመናዊው ፋሽን ጋር ያጣመሩ ክሮፕ ቶፖች፣ ኮርሴት ቬስቶች፣ ሃይ-ሎው ቀሚሶችና ባለ ኬፕ ሱሪዎች።",
           image: "/images/fashion/fusion_trousers_gold_cape_robe.jpg",
           category: "fusion",
         },
         {
-          title: "የወንዶች ባህላዊ አልባሳት",
-          desc: "በእጅ የተጠለፉ የመስቀል ቅርጽና የጥበብ ጌጦች ያሏቸው፣ ለሰርግና ለበዓላት የሚመጥኑ የወንዶች ዘመናዊ ባህላዊ ሸሚዞችና ሮያል ቱኒኮች።",
-          image: "/images/fashion/men_habesha_cross_shirt.jpg",
+          title: "የወንዶችና የጥንዶች አልባሳት",
+          desc: "ለሙሽሮችና ለተጣማሪዎች የተዘጋጁ ተዛማጅ የሰርግ ልብሶች፣ በእጅ የተጠለፉ የወንዶች ሸሚዞችና ሮያል ቱኒኮች።",
+          image: "/images/fashion/couples_attire_cultural.jpg",
           category: "men",
         }
       ]
     },
     lookbook: {
-      eyebrow: "የዲዛይን ማሳያ (Lookbook)",
+      eyebrow: "የዲዛይን ማሳያ (Lookroom)",
       title: "የተመረጡ የሰርክ ስራዎች",
       subtitle: "በአግድም በማሸብለል ሁሉንም ዲዛይኖች ይመልከቱ፤ ፎቶውን ጠቅ በማድረግ በሙሉ ስክሪን ይክፈቱ።",
       filterAll: "ሁሉም",
       filterBridal: "የሰርግ ቀሚሶች",
       filterFusion: "ዘመናዊ ውህደት",
       filterRental: "ሰርክ ኪራይ",
-      filterMen: "የወንዶች አልባሳት",
+      filterMen: "የወንዶችና ጥንዶች",
       viewDetails: "በሙሉ ስክሪን ይመልከቱ",
     },
     rentalSection: {
       badge: "SERK RENTAL • ሰርክ ኪራይ",
       title: "ለልዩ ቀንዎ የሚመጥን የባህል ቀሚስ ይከራዩ",
-      desc: "በሰርክ ቡቲክ ውስጥ ለሰርግ፣ ለመልስ፣ ለምርቃትና ለተለያዩ ክብረ በዓላት የሚሆኑ በርካታ የተሰፉ ዝግጁ የባህል ቀሚሶች በኪራይ ይገኛሉ።",
+      desc: "በሰርክ ቡቲክ ውስጥ ለሰርግ፣ ለመልስ፣ ለምርቃትና ለተለያዩ ክብረ በዓላት የሚሆኑ በርካታ የተሰፉ ዝግጁ የባህል ቀሚሶች በኪራይ ይገኛሉ። በቡቲካችን ቀርበው በመሞከር ለቀንዎ የሚስማማውን በቀላሉ ይምረጡ።",
       features: [
         "ለተለያዩ ዝግጅቶች የተዘጋጁ ውብ ስብስቦች",
-        "የተሟላ የጥበብ ጥልፍና የነጠላ ስብስብ",
+        "የተሟላ የጥበብ ጥልፍና የኔጠላ ስብስብ",
         "በቡቲካችን ቀርበው የመሞከር እድል",
         "በስልክ ወይም በቴሌግራም ፈጣን ማስያዣ"
       ],
@@ -292,7 +287,7 @@ export const content = {
         {
           platform: "Telegram",
           handle: "@serkdesign",
-          desc: "የቅርብ ጊዜ ፎቶዎችን ለማየትና ቀጥታ መልዕክት ለመላክ",
+          desc: "አዳዲስ የልብስ ፎቶዎችን ለማየትና ለቀጥታ ትዕዛዝ መልዕክት ለመላክ",
           link: verifiedSocials.telegram,
           action: "ቴሌግራም ቻናል ይቀላቀሉ"
         },
@@ -317,10 +312,12 @@ export const content = {
       title: "ቡቲካችንን ይጎብኙ ወይም ያነጋግሩን",
       desc: "ለትዕዛዝ፣ ለልኬትና ለኪራይ ቀጠሮ በስልክ፣ በቴሌግራም ወይም በአካል ይጎብኙን።",
       phoneTitle: "የቀጥታ ስልክ",
+      phoneDesc: "ስለ ዋጋና ስለ ትዕዛዝ ፈጣን መረጃ ለማግኘት ይደውሉ",
       locationTitle: "የሾውሩም አድራሻ",
-      locationText: "አዲስ አበባ፣ ኢትዮጵያ",
+      locationText: "22 ባማ ሲቲ ሞል / ቦሌ፣ አዲስ አበባ",
       mapBtn: "በGoogle Maps ይመልከቱ",
       telegramBtn: "በቴሌግራም መልዕክት ይላኩ",
+      telegramDesc: "የዲዛይን ፎቶዎችን ልከው ፈጣን ምላሽ ያግኙ",
     },
     footer: {
       brandDesc: "ሰርክ ዲዛይን በሜሮን (Serk Design by Meron) — የባህል ጥበብና ዘመናዊ ፋሽን ውህደት።",
@@ -346,7 +343,7 @@ export const content = {
       titleStart: "The Harmony of",
       titleHighlight: "Ethiopian Heritage",
       titleEnd: "& Modern Couture",
-      description: "Exquisite handwoven Habesha Kemis, royal bridal attire, modern cultural fusion ensembles, men's cultural wear, and the exclusive Serk Rental boutique collection.",
+      description: "Exquisite handwoven Habesha Kemis, royal bridal attire, modern cultural fusion ensembles, men's & couple's cultural wear, and the exclusive Serk Rental boutique collection.",
       exploreBtn: "Explore Collections",
       telegramBtn: "Inquire on Telegram",
       callBtn: "Call Directly",
@@ -360,7 +357,7 @@ export const content = {
       eyebrow: "About Serk Design by Meron",
       title: "Bridging Timeless Tradition with Contemporary Haute Couture",
       p1: "Established in 2020, Serk Design by Meron unites centuries-old Ethiopian weaving artistry and intricate tilet embroidery with contemporary silhouette design, creating breathtaking garments tailored for each client.",
-      p2: "Whether celebrating a wedding, Melse, graduation, or gala, Serk Design crafts custom bridal kemis, tailored men's cultural tunics, and offers curated ready-to-wear rental options directly from our boutique showroom.",
+      p2: "Whether celebrating a wedding, Melse, graduation, or gala, Serk Design crafts custom bridal kemis, tailored men's & couple's cultural attire, and offers curated ready-to-wear rental options directly from our boutique showroom.",
       pillars: [
         {
           title: "Bespoke Couture",
@@ -371,8 +368,8 @@ export const content = {
           desc: "Rent pristine Habesha dresses and evening gowns for weddings, photoshoots, and ceremonies."
         },
         {
-          title: "Men's Cultural Attire",
-          desc: "Handcrafted men's cultural shirts and royal tunics designed for festive celebrations."
+          title: "Men & Couples Attire",
+          desc: "Handcrafted men's cultural shirts and harmonized bridal couple sets."
         }
       ]
     },
@@ -380,6 +377,7 @@ export const content = {
       eyebrow: "Services",
       title: "Collections Designed by Meron",
       subtitle: "Each collection reflects impeccable needlework, authentic local textures, and modern elegance.",
+      exploreBtn: "Explore in Lookroom",
       cards: [
         {
           title: "Bridal & Celebration Kemis",
@@ -388,21 +386,15 @@ export const content = {
           category: "bridal",
         },
         {
-          title: "Serk Rental Boutique",
-          desc: "A curated boutique rental service offering pristine traditional gowns and evening wear for weddings, Melse, graduations, and photography sessions.",
-          image: "/images/fashion/serk_rental_navy_velvet_kaftan.jpg",
-          category: "rental",
-        },
-        {
           title: "Modern Cultural Fusion",
           desc: "Avant-garde couture blending authentic Ethiopian handwoven textures with contemporary silhouettes, including corseted waistcoats, high-low trains, and royal cape sets.",
           image: "/images/fashion/fusion_trousers_gold_cape_robe.jpg",
           category: "fusion",
         },
         {
-          title: "Men's Cultural Attire",
-          desc: "Custom tailored men's cultural shirts and royal tunics featuring traditional Ethiopian cross embroidery and mandarin collars designed for grooms and festive occasions.",
-          image: "/images/fashion/men_habesha_cross_shirt.jpg",
+          title: "Men's & Couple's Attire",
+          desc: "Harmonized wedding couple ensembles, bespoke cultural bride & groom pairings, and custom men's cultural shirts adorned with traditional cross motifs.",
+          image: "/images/fashion/couples_attire_cultural.jpg",
           category: "men",
         }
       ]
@@ -415,13 +407,13 @@ export const content = {
       filterBridal: "Bridal & Kemis",
       filterFusion: "Modern Fusion",
       filterRental: "Serk Rental",
-      filterMen: "Men's Attire",
+      filterMen: "Men & Couples",
       viewDetails: "View Fullscreen",
     },
     rentalSection: {
       badge: "SERK RENTAL • OCCASION WEAR",
       title: "Rent an Exquisite Kemis for Your Special Celebration",
-      desc: "The Serk boutique showroom features an extensive ready-to-wear collection of pristine Habesha Kemis, evening dresses, and traditional wraps available for wedding ceremonies, graduations, and photography shoots.",
+      desc: "The Serk boutique showroom features an extensive ready-to-wear collection of pristine Habesha Kemis, evening dresses, and traditional wraps available for wedding ceremonies, graduations, and photography shoots. Experience personalized in-boutique fitting to find your ideal match.",
       features: [
         "Curated wardrobe for festive celebrations",
         "Complete sets with hand-detailed netela shawls",
@@ -438,21 +430,21 @@ export const content = {
         {
           platform: "Telegram",
           handle: "@serkdesign",
-          desc: "Browse our newest releases and message us directly for inquiries",
+          desc: "Browse our newest releases, lookbook previews, and message us directly for instant orders",
           link: verifiedSocials.telegram,
           action: "Join Telegram Channel"
         },
         {
           platform: "Instagram",
           handle: "@serk_design06",
-          desc: "High-resolution lookbooks, model shoots, and design highlights",
+          desc: "High-resolution lookbooks, model shoots, runway previews, and design highlights",
           link: verifiedSocials.instagram,
           action: "Follow on Instagram"
         },
         {
           platform: "TikTok",
           handle: "serkdesignbymeron",
-          desc: "Video showcases, fitting sessions, and runway inspirations",
+          desc: "Dynamic video showcases, fitting sessions, craftsmanship reels, and runway inspirations",
           link: verifiedSocials.tiktok,
           action: "Watch on TikTok"
         }
@@ -463,10 +455,12 @@ export const content = {
       title: "Visit Our Showroom or Inquire",
       desc: "Connect with us for bespoke fittings, bridal orders, or boutique rentals via direct call or Telegram.",
       phoneTitle: "Direct Hotline",
+      phoneDesc: "Call us directly for pricing, measurements, and urgent orders",
       locationTitle: "Showroom Location",
-      locationText: "Addis Ababa, Ethiopia",
+      locationText: "22 Bama City Mall / Bole, Addis Ababa",
       mapBtn: "Open in Google Maps",
       telegramBtn: "Message on Telegram",
+      telegramDesc: "Send design photos and get immediate consultation",
     },
     footer: {
       brandDesc: "Serk Design by Meron — The pinnacle of Ethiopian cultural fashion and contemporary haute couture.",

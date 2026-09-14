@@ -33,14 +33,15 @@ export default function Footer({ t, lang }) {
             </div>
           </div>
 
-          {/* Contact Details & Social Links */}
+          {/* Contact Details & Social Links with +251 (Requirement 4) */}
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
-            {/* Phone */}
+            {/* Phone with +251 */}
             <a
-              href={`tel:${verifiedSocials.phone}`}
-              className="inline-flex items-center gap-1.5 text-serk-gold hover:text-serk-goldLight font-mono font-medium"
+              href={`tel:${verifiedSocials.phoneRaw}`}
+              className="inline-flex items-center gap-1.5 text-serk-gold hover:text-serk-goldLight font-mono font-medium text-sm"
+              title="Call Serk Design"
             >
-              <Phone size={13} />
+              <Phone size={14} />
               <span>{verifiedSocials.phone}</span>
             </a>
 

@@ -70,12 +70,12 @@ export default function Navbar({ lang, setLang, t }) {
             ))}
           </nav>
 
-          {/* Right Actions: Phone + Lang Switcher + Telegram */}
+          {/* Right Actions: Phone (+251) + Lang Switcher + Telegram */}
           <div className="hidden sm:flex items-center gap-3">
             
-            {/* Direct Phone Link from Logo */}
+            {/* Direct Phone Link with +251 country code (Requirement 4) */}
             <a
-              href={`tel:${verifiedSocials.phone}`}
+              href={`tel:${verifiedSocials.phoneRaw}`}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0D2F28] border border-serk-border hover:border-serk-gold text-xs text-serk-gold font-mono font-medium transition-colors"
               title="Call Serk Design"
             >
@@ -167,11 +167,11 @@ export default function Navbar({ lang, setLang, t }) {
 
           <div className="pt-3 border-t border-serk-border flex flex-col gap-2.5">
             <a
-              href={`tel:${verifiedSocials.phone}`}
+              href={`tel:${verifiedSocials.phoneRaw}`}
               className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#0D2F28] border border-serk-gold/40 text-serk-gold text-sm font-mono font-bold"
             >
               <Phone size={15} />
-              <span>{verifiedSocials.phoneFormatted}</span>
+              <span>{verifiedSocials.phone}</span>
             </a>
 
             <a

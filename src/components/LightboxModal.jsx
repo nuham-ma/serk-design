@@ -110,11 +110,11 @@ export default function LightboxModal({ item, onClose, lang }) {
             </a>
 
             <a
-              href={`tel:${verifiedSocials.phone}`}
+              href={`tel:${verifiedSocials.phoneRaw}`}
               className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#08221D] border border-serk-border text-serk-gold text-xs font-mono font-medium hover:border-serk-gold transition-colors"
             >
               <Phone size={14} />
-              <span>{verifiedSocials.phoneFormatted}</span>
+              <span>{verifiedSocials.phone}</span>
             </a>
           </div>
 

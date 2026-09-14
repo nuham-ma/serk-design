@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scissors, Sparkles, ShoppingBag, CheckCircle2 } from 'lucide-react';
+import { Scissors, Sparkles, ShoppingBag } from 'lucide-react';
 
 export default function BrandStory({ t, lang, onOpenModal }) {
   const icons = [Scissors, ShoppingBag, Sparkles];
@@ -14,40 +14,40 @@ export default function BrandStory({ t, lang, onOpenModal }) {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           
-          {/* Left Column: Larger, Visually Prominent Imagery (6 cols) */}
+          {/* Left Column: Larger, Distinct, High-Quality Imagery (6 cols) */}
           <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
               
-              {/* Image 1: High-Res Studio Portrait (Hands on Hips / Terracotta Arch) */}
+              {/* Image 1: High-Res Studio Portrait (Olive Corset Habesha Gown - Different from Hero) */}
               <div 
-                className="relative rounded-2xl overflow-hidden aspect-[3/4.2] border-2 border-serk-gold/30 group cursor-pointer shadow-2xl bg-[#0D2F28]"
+                className="relative rounded-2xl overflow-hidden aspect-[3/4.6] border-2 border-serk-gold/35 group cursor-pointer shadow-2xl bg-[#0D2F28]"
                 onClick={() => onOpenModal({
-                  id: "hero_portrait_alt",
-                  image: "/images/fashion/hero_portrait_alt.jpg",
-                  title: lang === 'am' ? "የሰርክ ዲዛይን ስቱዲዮ ንድፍ" : "Serk Design Studio Silhouette",
+                  id: "hero_portrait_highres",
+                  image: "/images/fashion/hero_portrait_highres.jpg",
+                  title: lang === 'am' ? "ኦሊቭ ኮርሴት ዘመናዊ የሀበሻ ቀሚስ" : "Olive Corset Modern Silhouette",
                   subtitle: lang === 'am' ? "ዘመናዊ አቆራረጥ ከጥንታዊ የኢትዮጵያ ጥበብ ጋር" : "Contemporary cut harmonized with Ethiopian weaving heritage",
                 })}
               >
                 <img
-                  src="/images/fashion/hero_portrait_alt.jpg"
-                  alt="Serk Design Studio Model"
+                  src="/images/fashion/hero_portrait_highres.jpg"
+                  alt="Serk Design Couture Model"
                   className="w-full h-full object-cover object-top group-hover:scale-106 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#051815]/90 via-transparent to-transparent"></div>
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#051815]/90 via-[#051815]/40 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <span className="text-[10px] font-mono text-serk-gold uppercase tracking-widest block font-bold">
-                    Couture Line
+                    Couture Studio
                   </span>
-                  <span className="text-sm font-semibold text-white">
+                  <span className="text-sm sm:text-base font-semibold text-white">
                     {lang === 'am' ? 'የሰርክ ልዩ ዲዛይን' : 'Signature Silhouette'}
                   </span>
                 </div>
               </div>
 
-              {/* Image 2: Boutique Showroom & Reception with Actual Logo Wall */}
+              {/* Image 2: Boutique Showroom & Reception with Official Logo Wall */}
               <div 
-                className="relative rounded-2xl overflow-hidden aspect-[3/4.2] border-2 border-serk-gold/30 group cursor-pointer shadow-2xl bg-[#0D2F28] sm:translate-y-6"
+                className="relative rounded-2xl overflow-hidden aspect-[3/4.6] border-2 border-serk-gold/35 group cursor-pointer shadow-2xl bg-[#0D2F28] sm:translate-y-6"
                 onClick={() => onOpenModal({
                   id: "serk_reception_gold_logo_wall",
                   image: "/images/fashion/serk_reception_gold_logo_wall.jpg",
@@ -61,12 +61,12 @@ export default function BrandStory({ t, lang, onOpenModal }) {
                   className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#051815]/90 via-transparent to-transparent"></div>
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#051815]/90 via-[#051815]/40 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <span className="text-[10px] font-mono text-serk-gold uppercase tracking-widest block font-bold">
                     Showroom
                   </span>
-                  <span className="text-sm font-semibold text-white">
+                  <span className="text-sm sm:text-base font-semibold text-white">
                     {lang === 'am' ? 'የሰርክ ማሳያ አዳራሽ' : 'Boutique Showroom'}
                   </span>
                 </div>
@@ -87,11 +87,11 @@ export default function BrandStory({ t, lang, onOpenModal }) {
               </h2>
             </div>
 
-            <p className="text-[#FDF3E5]/85 text-base leading-relaxed font-light">
+            <p className="text-[#FDF3E5]/85 text-base sm:text-lg leading-relaxed font-light">
               {t.brandStory.p1}
             </p>
 
-            <p className="text-[#FDF3E5]/80 text-base leading-relaxed font-light">
+            <p className="text-[#FDF3E5]/80 text-base sm:text-lg leading-relaxed font-light">
               {t.brandStory.p2}
             </p>
 
@@ -107,10 +107,10 @@ export default function BrandStory({ t, lang, onOpenModal }) {
                     <div className="w-8 h-8 rounded-lg bg-serk-gold/15 flex items-center justify-center text-serk-gold">
                       <Icon size={16} />
                     </div>
-                    <h3 className="text-sm font-bold text-[#FDF3E5]">
+                    <h3 className="text-sm sm:text-base font-bold text-[#FDF3E5]">
                       {pillar.title}
                     </h3>
-                    <p className="text-xs text-[#FDF3E5]/70 leading-relaxed font-light">
+                    <p className="text-xs sm:text-sm text-[#FDF3E5]/75 leading-relaxed font-light">
                       {pillar.desc}
                     </p>
                   </div>
