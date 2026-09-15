@@ -28,15 +28,27 @@ export default function BoutiqueVisit({ t, lang }) {
           {/* Card 1: Google Maps Showroom Pin with Verified Search Location */}
           <div className="bg-[#0D2F28] border border-serk-border hover:border-serk-gold/70 rounded-2xl p-6 flex flex-col justify-between space-y-5 shadow-xl transition-all hover:-translate-y-1">
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-serk-gold/15 text-serk-gold flex items-center justify-center border border-serk-gold/30 shadow-inner">
-                <MapPin size={22} className="animate-bounce" />
-              </div>
+              <a
+                href={verifiedSocials.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-xl bg-serk-gold/15 text-serk-gold flex items-center justify-center border border-serk-gold/30 shadow-inner hover:bg-serk-gold hover:text-[#08221D] transition-all cursor-pointer group"
+                title={t.visit.mapBtn}
+                aria-label={t.visit.mapBtn}
+              >
+                <MapPin size={22} className="animate-bounce group-hover:scale-110 transition-transform" />
+              </a>
               <h3 className="text-lg sm:text-xl font-bold font-serif text-[#FDF3E5]">
                 {t.visit.locationTitle}
               </h3>
-              <p className="text-base sm:text-lg font-bold font-serif text-serk-gold leading-snug">
+              <a
+                href={verifiedSocials.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base sm:text-lg font-bold font-serif text-serk-gold leading-snug hover:underline block"
+              >
                 {t.visit.locationText}
-              </p>
+              </a>
               <p className="text-sm sm:text-base text-[#FDF3E5]/85 font-light leading-relaxed">
                 {lang === 'am'
                   ? 'የሰርክ ዲዛይን ቡቲክን ትክክለኛ አድራሻ በGoogle Maps ይክፈቱ'
