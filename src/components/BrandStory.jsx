@@ -77,21 +77,21 @@ export default function BrandStory({ t, lang, onOpenModal }) {
               </div>
 
               {/* Text Information Box with Lookroom Styling */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-3 bg-[#0D2F28]">
-                <div className="space-y-1.5">
-                  <h3 className="text-lg sm:text-xl font-bold text-[#FDF3E5] group-hover:text-serk-gold transition-colors font-serif leading-snug">
+              <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3 bg-[#0D2F28]">
+                <div className="space-y-1.5 min-w-0">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#FDF3E5] group-hover:text-serk-gold transition-colors font-serif leading-snug break-words">
                     {lang === 'am' ? 'ኦሊቭ ኮርሴት ዘመናዊ የሀበሻ ቀሚስ' : 'Olive Corset Modern Silhouette'}
                   </h3>
-                  <p className="text-sm sm:text-base text-[#FDF3E5]/85 font-light line-clamp-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm lg:text-base text-[#FDF3E5]/85 font-light leading-relaxed break-words">
                     {lang === 'am' ? 'ዘመናዊ አቆራረጥ ከጥንታዊ የኢትዮጵያ ጥበብ ጋር' : 'Contemporary cut harmonized with Ethiopian weaving heritage'}
                   </p>
                 </div>
 
-                <div className="pt-3 flex items-center justify-between text-xs sm:text-sm font-mono text-serk-gold/90 border-t border-serk-border">
+                <div className="pt-3 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-mono text-serk-gold/90 border-t border-serk-border">
                   <span className="uppercase font-semibold tracking-wider">
                     {lang === 'am' ? 'የቀሚስ ዲዛይን' : 'Bespoke Kemis'}
                   </span>
-                  <span className="group-hover:text-serk-gold transition-colors flex items-center gap-1 font-sans font-medium text-xs sm:text-sm">
+                  <span className="group-hover:text-serk-gold transition-colors flex items-center gap-1 font-sans font-medium text-xs sm:text-sm shrink-0">
                     {lang === 'am' ? 'በሙሉ ስክሪን ይመልከቱ' : 'View Details'} &rarr;
                   </span>
                 </div>
@@ -136,21 +136,21 @@ export default function BrandStory({ t, lang, onOpenModal }) {
               </div>
 
               {/* Text Information Box with Lookroom Styling */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-3 bg-[#0D2F28]">
-                <div className="space-y-1.5">
-                  <h3 className="text-lg sm:text-xl font-bold text-[#FDF3E5] group-hover:text-serk-gold transition-colors font-serif leading-snug">
+              <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3 bg-[#0D2F28]">
+                <div className="space-y-1.5 min-w-0">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#FDF3E5] group-hover:text-serk-gold transition-colors font-serif leading-snug break-words">
                     {lang === 'am' ? 'የሰርክ ቡቲክ ማሳያ አዳራሽ' : 'Serk Showroom & Reception'}
                   </h3>
-                  <p className="text-sm sm:text-base text-[#FDF3E5]/85 font-light line-clamp-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm lg:text-base text-[#FDF3E5]/85 font-light leading-relaxed break-words">
                     {lang === 'am' ? 'የወርቅ ማዕረግ ሎጎ በሰርክ ማሳያ አዳራሽ' : 'Official Serk showroom reception in Addis Ababa'}
                   </p>
                 </div>
 
-                <div className="pt-3 flex items-center justify-between text-xs sm:text-sm font-mono text-serk-gold/90 border-t border-serk-border">
+                <div className="pt-3 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-mono text-serk-gold/90 border-t border-serk-border">
                   <span className="uppercase font-semibold tracking-wider">
                     {lang === 'am' ? 'ባማ ሲቲ ሞል' : 'Bama City Mall'}
                   </span>
-                  <span className="group-hover:text-serk-gold transition-colors flex items-center gap-1 font-sans font-medium text-xs sm:text-sm">
+                  <span className="group-hover:text-serk-gold transition-colors flex items-center gap-1 font-sans font-medium text-xs sm:text-sm shrink-0">
                     {lang === 'am' ? 'በሙሉ ስክሪን ይመልከቱ' : 'View Details'} &rarr;
                   </span>
                 </div>

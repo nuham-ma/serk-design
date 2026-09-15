@@ -29,7 +29,7 @@ export default function Footer({ t, lang }) {
                 {lang === 'am' ? 'ሰርክ ዲዛይን በሜሮን' : 'SERK DESIGN BY MERON'}
               </span>
               <span className="text-[10px] text-serk-gold uppercase font-mono tracking-wider">
-                ESTD 2020 • Addis Ababa
+                {lang === 'am' ? 'ESTD 2014 • አዲስ አበባ' : 'ESTD 2020 • Addis Ababa'}
               </span>
             </div>
           </div>

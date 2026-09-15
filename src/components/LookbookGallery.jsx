@@ -105,20 +105,20 @@ export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, 
                 </div>
               </div>
 
-              {/* Text Information Box with Enlarged Typography */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-3 bg-[#0D2F28]">
-                <div className="space-y-1.5">
-                  <h3 className="text-lg sm:text-xl font-bold text-[#FDF3E5] group-hover:text-serk-gold transition-colors font-serif leading-snug">
+              {/* Text Information Box with Responsive Typography */}
+              <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3 bg-[#0D2F28]">
+                <div className="space-y-1.5 min-w-0">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#FDF3E5] group-hover:text-serk-gold transition-colors font-serif leading-snug break-words">
                     {item.title[lang]}
                   </h3>
-                  <p className="text-sm sm:text-base text-[#FDF3E5]/85 font-light line-clamp-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm lg:text-base text-[#FDF3E5]/85 font-light leading-relaxed break-words">
                     {item.subtitle[lang]}
                   </p>
                 </div>
 
-                <div className="pt-3 flex items-center justify-between text-xs sm:text-sm font-mono text-serk-gold/90 border-t border-serk-border">
+                <div className="pt-3 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-mono text-serk-gold/90 border-t border-serk-border">
                   <span className="uppercase font-semibold tracking-wider">{item.badge[lang]}</span>
-                  <span className="group-hover:text-serk-gold transition-colors flex items-center gap-1 font-sans font-medium text-xs sm:text-sm">
+                  <span className="group-hover:text-serk-gold transition-colors flex items-center gap-1 font-sans font-medium text-xs sm:text-sm shrink-0">
                     {t.lookbook.viewDetails} &rarr;
                   </span>
                 </div>
