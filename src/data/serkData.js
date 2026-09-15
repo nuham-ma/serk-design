@@ -4,7 +4,7 @@ export const verifiedSocials = {
   tiktok: "https://vm.tiktok.com/ZS9BqV9pWhcr1-RtHPD/",
   phone: "+251 93 417 9992",
   phoneRaw: "+251934179992",
-  googleMapsUrl: "https://www.google.com/maps/place/9%C2%B000'36.1%22N+38%C2%B047'16.8%22E/@9.010025,38.788004,18z",
+  googleMapsUrl: "https://www.google.com/maps?q=9.010025,38.788004+(Serk+Design+by+Meron)",
   locationName: {
     am: "22 ከጎላጉል ወደ ቦሌ መንገድ አውራሪስ ሆቴል ሳደርሱ ባማ ሲቲ ሞል 209፣ አዲስ አበባ",
     en: "22 Golagul to Bole Road, near Awraris Hotel, Bama City Mall #209, Addis Ababa",
@@ -229,7 +229,7 @@ export const content = {
     lookbook: {
       eyebrow: "የዲዛይን ማሳያ (Lookroom)",
       title: "የተመረጡ የሰርክ ስራዎች",
-      subtitle: "በ3×3 ማሳያ የተዘጋጁ ምርጥ ዲዛይኖች፤ ፎቶውን ጠቅ በማድረግ በሙሉ ስክሪን ይክፈቱ።",
+      subtitle: "የተመረጡ የሰርክ ድንቅ ዲዛይኖች፤ ፎቶውን ጠቅ በማድረግ በሙሉ ስክሪን ይክፈቱ።",
       filterAll: "ሁሉም",
       filterBridal: "የሰርግ ቀሚሶች",
       filterFusion: "ዘመናዊ ውህደት",
@@ -375,7 +375,7 @@ export const content = {
     lookbook: {
       eyebrow: "Lookroom Gallery",
       title: "Curated Serk Creations",
-      subtitle: "Curated 3×3 showcase of signature designs; tap any photograph to inspect intricate details in high resolution.",
+      subtitle: "A showcase of signature designs; tap any photograph to inspect intricate details in high resolution.",
       filterAll: "All Designs",
       filterBridal: "Bridal & Kemis",
       filterFusion: "Modern Fusion",

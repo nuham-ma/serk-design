@@ -65,7 +65,7 @@ export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, 
           ))}
         </div>
 
-        {/* Responsive 3x3 Grid (Desktop: 3 columns, Tablet: 2 columns, Mobile: 1 column) */}
+        {/* Responsive Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredItems.map((item, index) => (
             <div
