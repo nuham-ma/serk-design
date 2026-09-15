@@ -121,22 +121,6 @@ export default function Hero({ t, lang, onOpenModal }) {
                       {lang === 'am' ? 'ኤመራልድ ግሪንና ወርቅ ፍሌር ቀሚስ' : 'Emerald & Gold Bell Flare Gown'}
                     </span>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-serk-gold/20 border border-serk-gold/50 flex items-center justify-center text-serk-gold group-hover:bg-serk-gold group-hover:text-[#08221D] transition-colors shrink-0">
-                    <Sparkles size={14} />
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Brand Badge (Bottom Left) */}
-              <div className="absolute -bottom-3 -left-3 hidden sm:flex items-center gap-2.5 bg-[#0D2F28] border border-serk-gold/40 rounded-xl p-2.5 shadow-2xl backdrop-blur-md">
-                <img
-                  src="/images/logo/serk_logo.jpg"
-                  alt="Logo emblem"
-                  className="w-8 h-8 rounded-lg object-cover border border-serk-gold/30"
-                />
-                <div className="text-left pr-2">
-                  <div className="text-[11px] font-bold text-[#FDF3E5]">SERK DESIGN</div>
-                  <div className="text-[9px] text-serk-gold font-mono tracking-wider">ESTD 2020</div>
                 </div>
               </div>
 

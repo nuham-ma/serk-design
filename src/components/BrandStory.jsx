@@ -47,7 +47,7 @@ export default function BrandStory({ t, lang, onOpenModal }) {
 
               {/* Image 2: Boutique Showroom & Reception with Official Logo Wall */}
               <div 
-                className="relative rounded-2xl overflow-hidden aspect-[3/4.6] border-2 border-serk-gold/35 group cursor-pointer shadow-2xl bg-[#0D2F28] sm:translate-y-6"
+                className="relative rounded-2xl overflow-hidden aspect-[3/4.6] border-2 border-serk-gold/35 group cursor-pointer shadow-2xl bg-[#0D2F28]"
                 onClick={() => onOpenModal({
                   id: "serk_reception_gold_logo_wall",
                   image: "/images/fashion/serk_reception_gold_logo_wall.jpg",
@@ -63,7 +63,7 @@ export default function BrandStory({ t, lang, onOpenModal }) {
                 />
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#051815]/90 via-[#051815]/40 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
-                  <span className="text-[10px] font-mono text-serk-gold uppercase tracking-widest block font-bold">
+                  <span className="text-xs font-mono text-serk-gold uppercase tracking-widest block font-bold">
                     Showroom
                   </span>
                   <span className="text-sm sm:text-base font-semibold text-white">
@@ -87,30 +87,30 @@ export default function BrandStory({ t, lang, onOpenModal }) {
               </h2>
             </div>
 
-            <p className="text-[#FDF3E5]/85 text-base sm:text-lg leading-relaxed font-light">
+            <p className="text-[#FDF3E5]/90 text-base sm:text-lg leading-relaxed font-light">
               {t.brandStory.p1}
             </p>
 
-            <p className="text-[#FDF3E5]/80 text-base sm:text-lg leading-relaxed font-light">
+            <p className="text-[#FDF3E5]/85 text-base sm:text-lg leading-relaxed font-light">
               {t.brandStory.p2}
             </p>
 
-            {/* 3 Core Value Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-3">
+            {/* 3 Core Value Pillars (Enlarged per uploaded reference) */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3">
               {t.brandStory.pillars.map((pillar, idx) => {
                 const Icon = icons[idx] || Sparkles;
                 return (
                   <div 
                     key={idx} 
-                    className="p-4 rounded-xl bg-[#0D2F28] border border-serk-border hover:border-serk-gold/60 transition-colors flex flex-col space-y-2"
+                    className="p-5 rounded-xl bg-[#0D2F28] border border-serk-border hover:border-serk-gold/60 transition-all flex flex-col space-y-2.5 shadow-lg"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-serk-gold/15 flex items-center justify-center text-serk-gold">
-                      <Icon size={16} />
+                    <div className="w-9 h-9 rounded-lg bg-serk-gold/15 flex items-center justify-center text-serk-gold">
+                      <Icon size={18} />
                     </div>
-                    <h3 className="text-sm sm:text-base font-bold text-[#FDF3E5]">
+                    <h3 className="text-base sm:text-lg font-bold text-[#FDF3E5] font-serif leading-snug">
                       {pillar.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#FDF3E5]/75 leading-relaxed font-light">
+                    <p className="text-sm sm:text-base text-[#FDF3E5]/85 leading-relaxed font-light">
                       {pillar.desc}
                     </p>
                   </div>

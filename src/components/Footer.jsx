@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone } from 'lucide-react';
 import { verifiedSocials } from '../data/serkData';
 import { TelegramIcon, InstagramIcon, TikTokIcon } from './BrandIcons';
+import { getLocalizedYear } from '../utils/dateHelper';
 
 export default function Footer({ t, lang }) {
   return (
@@ -84,9 +85,9 @@ export default function Footer({ t, lang }) {
         </div>
 
         {/* Bottom Compact Copyright & Speculative Attribution */}
-        <div className="pt-5 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[11px] text-[#FDF3E5]/50 text-center sm:text-left">
+        <div className="pt-5 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs text-[#FDF3E5]/60 text-center sm:text-left">
           <div>
-            <span>{t.footer.copyright}</span>
+            <span>&copy; {getLocalizedYear(lang)} {lang === 'am' ? 'ሰርክ ዲዛይን በሜሮን። ' : 'Serk Design by Meron. '}{t.footer.copyright}</span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-2 text-center sm:text-right">

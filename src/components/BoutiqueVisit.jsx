@@ -17,7 +17,7 @@ export default function BoutiqueVisit({ t, lang }) {
           <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#FDF3E5]">
             {t.visit.title}
           </h2>
-          <p className="text-sm sm:text-base text-[#FDF3E5]/80 font-light">
+          <p className="text-base sm:text-lg text-[#FDF3E5]/85 font-light">
             {t.visit.desc}
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function BoutiqueVisit({ t, lang }) {
               <p className="text-base sm:text-lg font-bold font-serif text-serk-gold leading-snug">
                 {t.visit.locationText}
               </p>
-              <p className="text-sm text-[#FDF3E5]/80 font-light leading-relaxed">
+              <p className="text-sm sm:text-base text-[#FDF3E5]/85 font-light leading-relaxed">
                 {lang === 'am'
                   ? 'የሰርክ ዲዛይን ቡቲክን ትክክለኛ አድራሻ በGoogle Maps ይክፈቱ'
                   : 'Open the verified Serk Design Meron location in Google Maps'}
@@ -48,7 +48,7 @@ export default function BoutiqueVisit({ t, lang }) {
               href={verifiedSocials.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-between text-sm font-bold text-serk-gold hover:underline pt-3 border-t border-serk-border"
+              className="inline-flex items-center justify-between text-sm sm:text-base font-bold text-serk-gold hover:underline pt-3 border-t border-serk-border"
             >
               <span>{t.visit.mapBtn}</span>
               <ExternalLink size={15} />
@@ -67,14 +67,14 @@ export default function BoutiqueVisit({ t, lang }) {
               <p className="text-base sm:text-lg font-mono font-bold text-serk-gold leading-snug">
                 {verifiedSocials.phone}
               </p>
-              <p className="text-sm text-[#FDF3E5]/80 font-light leading-relaxed">
+              <p className="text-sm sm:text-base text-[#FDF3E5]/85 font-light leading-relaxed">
                 {t.visit.phoneDesc}
               </p>
             </div>
 
             <a
               href={`tel:${verifiedSocials.phoneRaw}`}
-              className="inline-flex items-center justify-between text-sm font-bold text-serk-gold hover:underline pt-3 border-t border-serk-border"
+              className="inline-flex items-center justify-between text-sm sm:text-base font-bold text-serk-gold hover:underline pt-3 border-t border-serk-border"
             >
               <span>{lang === 'am' ? 'በቀጥታ ይደውሉ' : 'Call Now'}</span>
               <span>&rarr;</span>
@@ -93,7 +93,7 @@ export default function BoutiqueVisit({ t, lang }) {
               <p className="text-base sm:text-lg font-mono font-bold text-serk-gold leading-snug">
                 @serkdesign
               </p>
-              <p className="text-sm text-[#FDF3E5]/80 font-light leading-relaxed">
+              <p className="text-sm sm:text-base text-[#FDF3E5]/85 font-light leading-relaxed">
                 {t.visit.telegramDesc}
               </p>
             </div>

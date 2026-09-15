@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Send, Phone, ChevronRight } from 'lucide-react';
+import { Menu, X, Phone, ChevronRight, Calendar } from 'lucide-react';
 import { verifiedSocials } from '../data/serkData';
+import { TelegramIcon } from './BrandIcons';
+import { getLocalizedDate } from '../utils/dateHelper';
 
 export default function Navbar({ lang, setLang, t }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,6 +25,8 @@ export default function Navbar({ lang, setLang, t }) {
     { label: t.nav.visit, href: "#visit" },
   ];
 
+  const currentDateStr = getLocalizedDate(lang);
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -32,7 +36,7 @@ export default function Navbar({ lang, setLang, t }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Brand Logo with Actual Image */}
+          {/* Brand Logo with Actual Image (ESTD 2020 removed per requirement 4) */}
           <a href="#hero" className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-serk-gold/50 rounded-lg p-1">
             <div className="relative w-11 h-11 rounded-xl overflow-hidden border border-serk-gold/50 shadow-md group-hover:border-serk-gold transition-colors bg-[#08221D] shrink-0">
               <img 
@@ -45,19 +49,14 @@ export default function Navbar({ lang, setLang, t }) {
               <span className="text-base sm:text-lg font-bold tracking-wider text-[#FDF3E5] group-hover:text-serk-gold transition-colors font-sans uppercase leading-tight">
                 {lang === 'am' ? 'ሰርክ ዲዛይን' : 'SERK DESIGN'}
               </span>
-              <div className="flex items-center gap-2">
-                <span className="text-[10px] tracking-[0.2em] text-serk-gold uppercase font-serif font-medium">
-                  by Meron
-                </span>
-                <span className="text-[9px] px-1.5 py-0.2 rounded bg-serk-gold/15 text-serk-gold font-mono border border-serk-gold/30">
-                  ESTD 2020
-                </span>
-              </div>
+              <span className="text-[10px] tracking-[0.2em] text-serk-gold uppercase font-serif font-medium">
+                {lang === 'am' ? 'በሜሮን' : 'by Meron'}
+              </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -70,18 +69,14 @@ export default function Navbar({ lang, setLang, t }) {
             ))}
           </nav>
 
-          {/* Right Actions: Phone (+251) + Lang Switcher + Telegram */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Right Actions: Live Date + Compact Phone/Telegram Icon Buttons + Lang Switcher */}
+          <div className="hidden sm:flex items-center gap-2.5">
             
-            {/* Direct Phone Link with +251 country code (Requirement 4) */}
-            <a
-              href={`tel:${verifiedSocials.phoneRaw}`}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0D2F28] border border-serk-border hover:border-serk-gold text-xs text-serk-gold font-mono font-medium transition-colors"
-              title="Call Serk Design"
-            >
-              <Phone size={13} />
-              <span>{verifiedSocials.phone}</span>
-            </a>
+            {/* Live Ethiopian / Gregorian Calendar Date Indicator (Requirement 6) */}
+            <div className="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0D2F28]/90 border border-serk-border text-[11px] font-mono text-serk-gold" title="Today's Date">
+              <Calendar size={12} className="text-serk-gold/80" />
+              <span>{currentDateStr}</span>
+            </div>
 
             {/* Language Switcher */}
             <div className="flex items-center bg-[#0D2F28] border border-serk-border rounded-full p-1 text-xs">
@@ -111,25 +106,62 @@ export default function Navbar({ lang, setLang, t }) {
               </button>
             </div>
 
-            {/* Telegram CTA */}
+            {/* Compact Call & Telegram Icon Buttons Grouped Together (Requirements 2 & 3) */}
+            <div className="flex items-center gap-1.5 pl-1">
+              
+              {/* Phone Icon Button (No visible text, button clickable) */}
+              <a
+                href={`tel:${verifiedSocials.phoneRaw}`}
+                className="w-9 h-9 rounded-full bg-[#0D2F28] border border-serk-gold/40 text-serk-gold hover:border-serk-gold hover:bg-serk-gold hover:text-[#08221D] flex items-center justify-center transition-all shadow-md active:scale-95"
+                title={lang === 'am' ? "በስልክ ይደውሉ" : "Call Hotline"}
+                aria-label="Call Serk Design"
+              >
+                <Phone size={15} />
+              </a>
+
+              {/* Telegram Icon Button (No visible text, button clickable) */}
+              <a
+                href={verifiedSocials.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-serk-gold text-[#08221D] hover:bg-serk-goldLight flex items-center justify-center transition-all shadow-md active:scale-95"
+                title={lang === 'am' ? "በቴሌግራም ያግኙን" : "Inquire on Telegram"}
+                aria-label="Telegram"
+              >
+                <TelegramIcon size={16} />
+              </a>
+
+            </div>
+
+          </div>
+
+          {/* Mobile Right Controls: Compact Icons + Lang Toggle + Hamburger */}
+          <div className="flex items-center gap-1.5 sm:hidden">
+            {/* Quick Call Icon on Mobile */}
+            <a
+              href={`tel:${verifiedSocials.phoneRaw}`}
+              className="w-8 h-8 rounded-full bg-[#0D2F28] border border-serk-gold/40 text-serk-gold flex items-center justify-center"
+              aria-label="Call Hotline"
+            >
+              <Phone size={14} />
+            </a>
+
+            {/* Quick Telegram Icon on Mobile */}
             <a
               href={verifiedSocials.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-serk-gold to-serk-goldLight text-[#08221D] text-xs font-bold tracking-wide uppercase shadow-lg shadow-serk-gold/20 hover:brightness-110 active:scale-95 transition-all"
+              className="w-8 h-8 rounded-full bg-serk-gold text-[#08221D] flex items-center justify-center shadow"
+              aria-label="Telegram"
             >
-              <Send size={13} />
-              <span>{t.nav.consultBtn}</span>
+              <TelegramIcon size={14} />
             </a>
-          </div>
 
-          {/* Mobile Menu & Language Toggle button */}
-          <div className="flex items-center gap-2 sm:hidden">
             {/* Quick Lang toggle on mobile */}
             <button
               type="button"
               onClick={() => setLang(lang === 'am' ? 'en' : 'am')}
-              className="px-2.5 py-1 text-xs rounded-full border border-serk-gold/40 text-serk-gold font-bold bg-[#0D2F28]"
+              className="px-2.5 py-1 text-xs rounded-full border border-serk-gold/40 text-serk-gold font-bold bg-[#0D2F28] ml-0.5"
             >
               {lang === 'am' ? 'EN' : 'አማ'}
             </button>
@@ -138,11 +170,11 @@ export default function Navbar({ lang, setLang, t }) {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-[#FDF3E5] hover:text-serk-gold hover:bg-[#0D2F28] focus:outline-none focus:ring-2 focus:ring-serk-gold"
+              className="p-1.5 rounded-lg text-[#FDF3E5] hover:text-serk-gold hover:bg-[#0D2F28] focus:outline-none focus:ring-2 focus:ring-serk-gold"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
@@ -151,6 +183,12 @@ export default function Navbar({ lang, setLang, t }) {
       {/* Mobile Slide-down Drawer */}
       {mobileMenuOpen && (
         <div className="sm:hidden bg-[#08221D] border-b border-serk-gold/30 px-4 pt-3 pb-6 space-y-3 animate-modal-in shadow-2xl">
+          {/* Mobile Date Indicator */}
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0D2F28] border border-serk-border text-xs font-mono text-serk-gold">
+            <Calendar size={13} />
+            <span>{currentDateStr}</span>
+          </div>
+
           <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <a
@@ -165,13 +203,13 @@ export default function Navbar({ lang, setLang, t }) {
             ))}
           </nav>
 
-          <div className="pt-3 border-t border-serk-border flex flex-col gap-2.5">
+          <div className="pt-3 border-t border-serk-border grid grid-cols-2 gap-2.5">
             <a
               href={`tel:${verifiedSocials.phoneRaw}`}
-              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#0D2F28] border border-serk-gold/40 text-serk-gold text-sm font-mono font-bold"
+              className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#0D2F28] border border-serk-gold/40 text-serk-gold text-sm font-mono font-bold"
             >
               <Phone size={15} />
-              <span>{verifiedSocials.phone}</span>
+              <span>{lang === 'am' ? 'ይደውሉ' : 'Call'}</span>
             </a>
 
             <a
@@ -179,10 +217,10 @@ export default function Navbar({ lang, setLang, t }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-serk-gold text-[#08221D] text-sm font-bold shadow-lg"
+              className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-serk-gold text-[#08221D] text-sm font-bold shadow-lg"
             >
-              <Send size={16} />
-              <span>{t.nav.consultBtn}</span>
+              <TelegramIcon size={15} />
+              <span>Telegram</span>
             </a>
           </div>
         </div>

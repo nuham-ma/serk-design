@@ -41,7 +41,7 @@ export default function App() {
       <main className="flex-grow">
         <Hero t={t} lang={lang} onOpenModal={setModalItem} />
         <BrandStory t={t} lang={lang} onOpenModal={setModalItem} />
-        <Collections t={t} onSelectCategory={handleSelectCategory} />
+        <Collections t={t} lang={lang} onSelectCategory={handleSelectCategory} />
         <SerkRental t={t} lang={lang} onOpenModal={setModalItem} />
         <LookbookGallery 
           t={t} 
