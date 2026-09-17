@@ -71,7 +71,7 @@ export default function BrandStory({ t, lang, onOpenModal }) {
             <div className="grid grid-cols-2 gap-3.5 sm:gap-5">
               
               {/* Photo 1: Haute Couture Silhouette (Static Image, No Captions/Lightbox) */}
-              <div className="w-full relative bg-[#0D2F28] rounded-2xl overflow-hidden border border-serk-border hover:border-serk-gold/50 transition-all duration-300 shadow-xl aspect-[3/4]">
+              <div className="w-full relative bg-[#0D2F28] rounded-2xl overflow-hidden border border-serk-border hover:border-serk-gold/50 transition-all duration-300 shadow-xl aspect-[3/4.8]">
                 <img
                   src="/images/fashion/hero_portrait_highres.jpg"
                   alt="Serk Design Couture Model"
@@ -81,7 +81,7 @@ export default function BrandStory({ t, lang, onOpenModal }) {
               </div>
 
               {/* Photo 2: Boutique Showroom & Reception (Static Image, No Captions/Lightbox) */}
-              <div className="w-full relative bg-[#0D2F28] rounded-2xl overflow-hidden border border-serk-border hover:border-serk-gold/50 transition-all duration-300 shadow-xl aspect-[3/4]">
+              <div className="w-full relative bg-[#0D2F28] rounded-2xl overflow-hidden border border-serk-border hover:border-serk-gold/50 transition-all duration-300 shadow-xl aspect-[3/4.8]">
                 <img
                   src="/images/fashion/serk_reception_gold_logo_wall.jpg"
                   alt="Serk Showroom Reception"

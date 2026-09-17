@@ -135,15 +135,15 @@ export default function SerkRental({ t, lang, onOpenModal }) {
           {/* Right Column: Compact, Non-Cropped Auto-Scrolling Carousel (5 cols) */}
           <div className="lg:col-span-5 relative w-full">
             
-            {/* Compact Carousel Frame with Full Uncropped Garment Display */}
-            <div className="relative max-w-xs sm:max-w-sm lg:max-w-[320px] mx-auto rounded-2xl overflow-hidden border border-serk-gold/40 shadow-xl bg-[#051815] aspect-[3/4.2] max-h-[420px] flex items-center justify-center">
+            {/* Compact Carousel Frame with Full Uncropped Garment Display (Wider Horizontal Frame) */}
+            <div className="relative max-w-sm sm:max-w-md lg:max-w-[480px] mx-auto rounded-2xl overflow-hidden border border-serk-gold/40 shadow-xl bg-[#051815] aspect-[16/13] h-[380px] sm:h-[420px] max-h-[420px] flex items-center justify-center">
               
               {rentalImages.map((img, idx) => {
                 const isActive = idx === currentIndex;
                 return (
                   <div
                     key={img.id}
-                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out cursor-pointer group flex items-center justify-center p-2.5 ${
+                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out cursor-pointer group flex items-center justify-center p-3 ${
                       isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
                     }`}
                     onClick={() => onOpenModal({
@@ -155,7 +155,7 @@ export default function SerkRental({ t, lang, onOpenModal }) {
                       category: 'rental'
                     })}
                   >
-                    {/* 100% Full Photo Visible - Zero Cropping or Zoom */}
+                    {/* 100% Full Photo Visible - Zero Cropping or Zoom, Wider Frame */}
                     <img
                       src={img.src}
                       alt={img.title}
@@ -174,7 +174,7 @@ export default function SerkRental({ t, lang, onOpenModal }) {
               <button
                 type="button"
                 onClick={handlePrev}
-                className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#08221D]/85 border border-serk-gold/40 text-serk-gold flex items-center justify-center hover:bg-serk-gold hover:text-[#08221D] transition-all shadow-md active:scale-95"
+                className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#08221D]/85 border border-serk-gold/40 text-serk-gold flex items-center justify-center hover:bg-serk-gold hover:text-[#08221D] transition-all shadow-md active:scale-95"
                 aria-label="Previous rental image"
               >
                 <ChevronLeft size={18} />
@@ -183,7 +183,7 @@ export default function SerkRental({ t, lang, onOpenModal }) {
               <button
                 type="button"
                 onClick={handleNext}
-                className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#08221D]/85 border border-serk-gold/40 text-serk-gold flex items-center justify-center hover:bg-serk-gold hover:text-[#08221D] transition-all shadow-md active:scale-95"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#08221D]/85 border border-serk-gold/40 text-serk-gold flex items-center justify-center hover:bg-serk-gold hover:text-[#08221D] transition-all shadow-md active:scale-95"
                 aria-label="Next rental image"
               >
                 <ChevronRight size={18} />
@@ -192,7 +192,7 @@ export default function SerkRental({ t, lang, onOpenModal }) {
             </div>
 
             {/* Compact Caption Bar & Dots Below Carousel */}
-            <div className="mt-3 max-w-xs sm:max-w-sm lg:max-w-[320px] mx-auto px-1 flex items-center justify-between">
+            <div className="mt-3 max-w-sm sm:max-w-md lg:max-w-[480px] mx-auto px-1 flex items-center justify-between">
               <div className="min-w-0 pr-2">
                 <span className="text-[10px] font-mono text-serk-gold uppercase tracking-wider font-bold block truncate">
                   SERK RENTAL • {rentalImages[currentIndex].tag}

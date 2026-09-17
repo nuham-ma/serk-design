@@ -121,7 +121,7 @@ export const lookbookItems = [
     },
     badge: { am: "የወንዶች", en: "Men's" }
   },
-  // 9. Men & Couples
+  // 8. Men & Couples
   {
     id: "men_habesha_cross_shirt",
     image: "/images/fashion/men_habesha_cross_shirt.jpg",
@@ -135,6 +135,21 @@ export const lookbookItems = [
       en: "Tailored short-sleeve silhouette featuring traditional Ethiopian cross tilet",
     },
     badge: { am: "የወንዶች", en: "Men's" }
+  },
+  // 9. Bridal
+  {
+    id: "kemis_silver_column_gown",
+    image: "/images/fashion/kemis_silver_column_gown.jpg",
+    category: "bridal",
+    title: {
+      am: "የብር ጥልፍ ክላሲክ የሰርግ ቀሚስ",
+      en: "Royal Silver Column Bridal Gown",
+    },
+    subtitle: {
+      am: "በብርና ወርቅ ጥበብ የተዋበ ማራኪ የሙሽሪት ቀሚስ",
+      en: "Handcrafted silver embroidery gown tailored with elegant silhouette",
+    },
+    badge: { am: "የሰርግ", en: "Bridal" }
   }
 ];
 
