@@ -14,7 +14,7 @@ export default function BrandStory({ t, lang, onOpenModal }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* 2-Column Balanced Layout: All Explanation/Text on One Side, Both Photos Together on the Opposite Side */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end">
           
           {/* Column 1: All Explanation & Text Content (7 cols desktop, 1st on mobile) */}
           <div className="lg:col-span-7 space-y-6 text-left">
@@ -67,11 +67,11 @@ export default function BrandStory({ t, lang, onOpenModal }) {
           </div>
 
           {/* Column 2: Both About Section Photos Grouped Together (5 cols desktop, 2nd on mobile) */}
-          <div className="lg:col-span-5 w-full">
+          <div className="lg:col-span-5 w-full lg:self-end">
             <div className="grid grid-cols-2 gap-3.5 sm:gap-5">
               
               {/* Photo 1: Haute Couture Silhouette (Static Image, No Captions/Lightbox) */}
-              <div className="w-full relative bg-[#0D2F28] rounded-2xl overflow-hidden border border-serk-border hover:border-serk-gold/50 transition-all duration-300 shadow-xl aspect-[3/4.8]">
+              <div className="w-full relative bg-[#0D2F28] rounded-2xl overflow-hidden border border-serk-border hover:border-serk-gold/50 transition-all duration-300 shadow-xl aspect-[3/5] sm:aspect-[3/5.5] lg:aspect-[3/6.4]">
                 <img
                   src="/images/fashion/hero_portrait_highres.jpg"
                   alt="Serk Design Couture Model"
@@ -81,7 +81,7 @@ export default function BrandStory({ t, lang, onOpenModal }) {
               </div>
 
               {/* Photo 2: Boutique Showroom & Reception (Static Image, No Captions/Lightbox) */}
-              <div className="w-full relative bg-[#0D2F28] rounded-2xl overflow-hidden border border-serk-border hover:border-serk-gold/50 transition-all duration-300 shadow-xl aspect-[3/4.8]">
+              <div className="w-full relative bg-[#0D2F28] rounded-2xl overflow-hidden border border-serk-border hover:border-serk-gold/50 transition-all duration-300 shadow-xl aspect-[3/5] sm:aspect-[3/5.5] lg:aspect-[3/6.4]">
                 <img
                   src="/images/fashion/serk_reception_gold_logo_wall.jpg"
                   alt="Serk Showroom Reception"

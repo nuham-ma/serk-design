@@ -135,15 +135,15 @@ export default function SerkRental({ t, lang, onOpenModal }) {
           {/* Right Column: Compact, Non-Cropped Auto-Scrolling Carousel (5 cols) */}
           <div className="lg:col-span-5 relative w-full">
             
-            {/* Compact Carousel Frame with Full Uncropped Garment Display (Wider Horizontal Frame) */}
-            <div className="relative max-w-sm sm:max-w-md lg:max-w-[480px] mx-auto rounded-2xl overflow-hidden border border-serk-gold/40 shadow-xl bg-[#051815] aspect-[16/13] h-[380px] sm:h-[420px] max-h-[420px] flex items-center justify-center">
+            {/* Compact Carousel Frame - Photo fully covers and fills the frame horizontally with zero side space */}
+            <div className="relative w-full max-w-[290px] sm:max-w-[310px] mx-auto rounded-2xl overflow-hidden border border-serk-gold/40 shadow-xl bg-[#051815] h-[380px] sm:h-[420px] max-h-[420px] flex items-center justify-center">
               
               {rentalImages.map((img, idx) => {
                 const isActive = idx === currentIndex;
                 return (
                   <div
                     key={img.id}
-                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out cursor-pointer group flex items-center justify-center p-3 ${
+                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out cursor-pointer group flex items-center justify-center ${
                       isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
                     }`}
                     onClick={() => onOpenModal({
@@ -155,11 +155,11 @@ export default function SerkRental({ t, lang, onOpenModal }) {
                       category: 'rental'
                     })}
                   >
-                    {/* 100% Full Photo Visible - Zero Cropping or Zoom, Wider Frame */}
+                    {/* Full Photo reaches left and right edges horizontally - zero empty space, zero distortion */}
                     <img
                       src={img.src}
                       alt={img.title}
-                      className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-102"
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102"
                     />
 
                     {/* Subtle Top Badge */}
@@ -192,7 +192,7 @@ export default function SerkRental({ t, lang, onOpenModal }) {
             </div>
 
             {/* Compact Caption Bar & Dots Below Carousel */}
-            <div className="mt-3 max-w-sm sm:max-w-md lg:max-w-[480px] mx-auto px-1 flex items-center justify-between">
+            <div className="mt-3 max-w-[290px] sm:max-w-[310px] mx-auto px-1 flex items-center justify-between">
               <div className="min-w-0 pr-2">
                 <span className="text-[10px] font-mono text-serk-gold uppercase tracking-wider font-bold block truncate">
                   SERK RENTAL • {rentalImages[currentIndex].tag}
