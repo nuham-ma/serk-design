@@ -12,15 +12,13 @@ import Footer from './components/Footer';
 import LightboxModal from './components/LightboxModal';
 
 export default function App() {
-  const [lang, setLang] = useState(() => {
-    return localStorage.getItem('serk_lang') || 'am';
-  });
+  // Default language is Amharic ('am') on first visit and on refresh
+  const [lang, setLang] = useState('am');
 
   const [modalItem, setModalItem] = useState(null);
   const [activeCategory, setActiveCategory] = useState('all');
 
   useEffect(() => {
-    localStorage.setItem('serk_lang', lang);
     document.documentElement.lang = lang;
   }, [lang]);
 

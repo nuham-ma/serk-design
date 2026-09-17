@@ -64,7 +64,7 @@ export default function SerkRental({ t, lang, onOpenModal }) {
   return (
     <section 
       id="rental" 
-      className="py-28 sm:py-36 bg-gradient-to-b from-[#051815] via-[#0A2E28] to-[#051815] relative overflow-hidden border-t border-b border-serk-border"
+      className="py-20 sm:py-24 bg-gradient-to-b from-[#051815] via-[#0A2E28] to-[#051815] relative overflow-hidden border-t border-b border-serk-border"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -74,11 +74,11 @@ export default function SerkRental({ t, lang, onOpenModal }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Generously Spaced Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        {/* Balanced Grid: 7 cols text, 5 cols compact carousel */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* Left Text & Features (5 cols) */}
-          <div className="lg:col-span-5 space-y-7 text-left">
+          {/* Left Text & Features (7 cols) */}
+          <div className="lg:col-span-7 space-y-6 text-left">
             
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-serk-gold/15 border border-serk-gold/40 text-serk-gold text-xs font-bold uppercase tracking-wider">
               <ShoppingBag size={14} />
@@ -93,8 +93,8 @@ export default function SerkRental({ t, lang, onOpenModal }) {
               {t.rentalSection.desc}
             </p>
 
-            {/* Checklist of Rental Features with improved readable font size */}
-            <div className="space-y-3.5 pt-2">
+            {/* Checklist of Rental Features with readable font size */}
+            <div className="space-y-3 pt-1">
               {t.rentalSection.features.map((feat, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-serk-gold/20 text-serk-gold flex items-center justify-center shrink-0 mt-0.5 border border-serk-gold/40">
@@ -108,7 +108,7 @@ export default function SerkRental({ t, lang, onOpenModal }) {
             </div>
 
             {/* Inquire & Call CTA Buttons with +251 phone number */}
-            <div className="pt-4 flex flex-wrap items-center gap-3.5">
+            <div className="pt-3 flex flex-wrap items-center gap-3.5">
               <a
                 href={verifiedSocials.telegram}
                 target="_blank"
@@ -132,18 +132,18 @@ export default function SerkRental({ t, lang, onOpenModal }) {
 
           </div>
 
-          {/* Right Column: Larger Visual Impact Auto-Scrolling Carousel (7 cols) */}
-          <div className="lg:col-span-7 relative">
+          {/* Right Column: Compact, Non-Cropped Auto-Scrolling Carousel (5 cols) */}
+          <div className="lg:col-span-5 relative w-full">
             
-            {/* Main Featured Carousel Display with Non-Cropped Full Photo Visibility */}
-            <div className="relative rounded-2xl overflow-hidden border-2 border-serk-gold/35 shadow-2xl bg-[#051815] aspect-[3/4] sm:aspect-[3/4.2] flex items-center justify-center">
+            {/* Compact Carousel Frame with Full Uncropped Garment Display */}
+            <div className="relative max-w-xs sm:max-w-sm lg:max-w-[320px] mx-auto rounded-2xl overflow-hidden border border-serk-gold/40 shadow-xl bg-[#051815] aspect-[3/4.2] max-h-[420px] flex items-center justify-center">
               
               {rentalImages.map((img, idx) => {
                 const isActive = idx === currentIndex;
                 return (
                   <div
                     key={img.id}
-                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out cursor-pointer group flex items-center justify-center ${
+                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out cursor-pointer group flex items-center justify-center p-2.5 ${
                       isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
                     }`}
                     onClick={() => onOpenModal({
@@ -155,28 +155,16 @@ export default function SerkRental({ t, lang, onOpenModal }) {
                       category: 'rental'
                     })}
                   >
+                    {/* 100% Full Photo Visible - Zero Cropping or Zoom */}
                     <img
                       src={img.src}
                       alt={img.title}
-                      className="w-full h-full object-contain object-center transition-transform duration-700 ease-out"
+                      className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-102"
                     />
 
-                    {/* Very subtle bottom gradient for title clarity (Requirement 9) */}
-                    <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#08221D]/90 via-[#08221D]/40 to-transparent"></div>
-
-                    {/* Floating Title Card */}
-                    <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-[#08221D]/90 backdrop-blur-md border border-serk-gold/30 flex items-center justify-between shadow-xl">
-                      <div>
-                        <span className="text-[11px] font-mono text-serk-gold uppercase tracking-wider font-bold block">
-                          SERK RENTAL • {img.tag}
-                        </span>
-                        <h4 className="text-sm sm:text-base font-bold text-[#FDF3E5] font-serif">
-                          {img.title}
-                        </h4>
-                      </div>
-                      <div className="px-3 py-1.5 rounded-full bg-serk-gold text-[#08221D] text-xs font-bold shrink-0">
-                        {lang === 'am' ? 'ይመልከቱ' : 'Inspect'}
-                      </div>
+                    {/* Subtle Top Badge */}
+                    <div className="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-[#08221D]/90 backdrop-blur-md border border-serk-gold/40 text-[10px] uppercase font-bold text-serk-gold tracking-wider shadow">
+                      {img.tag}
                     </div>
                   </div>
                 );
@@ -186,38 +174,48 @@ export default function SerkRental({ t, lang, onOpenModal }) {
               <button
                 type="button"
                 onClick={handlePrev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-[#08221D]/80 border border-serk-gold/40 text-serk-gold flex items-center justify-center hover:bg-serk-gold hover:text-[#08221D] transition-all shadow-lg active:scale-95"
+                className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#08221D]/85 border border-serk-gold/40 text-serk-gold flex items-center justify-center hover:bg-serk-gold hover:text-[#08221D] transition-all shadow-md active:scale-95"
                 aria-label="Previous rental image"
               >
-                <ChevronLeft size={22} />
+                <ChevronLeft size={18} />
               </button>
 
               <button
                 type="button"
                 onClick={handleNext}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-[#08221D]/80 border border-serk-gold/40 text-serk-gold flex items-center justify-center hover:bg-serk-gold hover:text-[#08221D] transition-all shadow-lg active:scale-95"
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#08221D]/85 border border-serk-gold/40 text-serk-gold flex items-center justify-center hover:bg-serk-gold hover:text-[#08221D] transition-all shadow-md active:scale-95"
                 aria-label="Next rental image"
               >
-                <ChevronRight size={22} />
+                <ChevronRight size={18} />
               </button>
 
             </div>
 
-            {/* Pagination Thumbnails / Dots for Direct Selection */}
-            <div className="flex items-center justify-center gap-2 mt-4">
-              {rentalImages.map((_, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => setCurrentIndex(idx)}
-                  className={`h-2 rounded-full transition-all ${
-                    idx === currentIndex 
-                      ? 'w-8 bg-serk-gold shadow-sm shadow-serk-gold/50' 
-                      : 'w-2 bg-serk-border hover:bg-serk-gold/50'
-                  }`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
+            {/* Compact Caption Bar & Dots Below Carousel */}
+            <div className="mt-3 max-w-xs sm:max-w-sm lg:max-w-[320px] mx-auto px-1 flex items-center justify-between">
+              <div className="min-w-0 pr-2">
+                <span className="text-[10px] font-mono text-serk-gold uppercase tracking-wider font-bold block truncate">
+                  SERK RENTAL • {rentalImages[currentIndex].tag}
+                </span>
+                <h4 className="text-xs sm:text-sm font-bold text-[#FDF3E5] font-serif truncate">
+                  {rentalImages[currentIndex].title}
+                </h4>
+              </div>
+              <div className="flex items-center gap-1.5 shrink-0">
+                {rentalImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`h-1.5 rounded-full transition-all ${
+                      idx === currentIndex 
+                        ? 'w-5 bg-serk-gold shadow-sm' 
+                        : 'w-1.5 bg-serk-border hover:bg-serk-gold/50'
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
 
           </div>
