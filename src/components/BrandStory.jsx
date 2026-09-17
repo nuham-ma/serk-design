@@ -13,11 +13,11 @@ export default function BrandStory({ t, lang, onOpenModal }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8 sm:space-y-10">
         
-        {/* FIRST ROW: LEFT SIDE TEXT + RIGHT SIDE PHOTO */}
+        {/* 2-COLUMN BALANCED LAYOUT: ALL TEXT ON THE LEFT, PHOTO ON THE RIGHT */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
-          {/* LEFT SIDE — Text (7 cols desktop) */}
-          <div className="lg:col-span-7 space-y-5 text-left">
+          {/* LEFT SIDE — ALL TEXT: Eyebrow, Title, Paragraph 1, and Paragraph 2 */}
+          <div className="lg:col-span-7 space-y-6 text-left">
             {/* Eyebrow */}
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-serk-gold block">
               {t.brandStory.eyebrow}
@@ -28,18 +28,26 @@ export default function BrandStory({ t, lang, onOpenModal }) {
               {t.brandStory.title}
             </h2>
 
-            {/* First Paragraph: "ሰርክ ዲዛይን በሜሮን (Serk Design by Meron) ከ2014 ጀምሮ..." */}
-            <p className="text-[#FDF3E5]/90 text-base sm:text-lg leading-relaxed font-light">
-              {t.brandStory.p1}
-            </p>
+            {/* Narrative Story Paragraphs (Both together on the left side) */}
+            <div className="space-y-4 sm:space-y-5">
+              {/* First Paragraph: "ሰርክ ዲዛይን በሜሮን (Serk Design by Meron) ከ2014 ጀምሮ..." */}
+              <p className="text-[#FDF3E5]/90 text-base sm:text-lg leading-relaxed font-light">
+                {t.brandStory.p1}
+              </p>
+
+              {/* Second Paragraph directly below the first: "ለሰርግ፣ ለደማቅ ክብረ በዓላት..." */}
+              <p className="text-[#FDF3E5]/85 text-base sm:text-lg leading-relaxed font-light">
+                {t.brandStory.p2}
+              </p>
+            </div>
           </div>
 
-          {/* RIGHT SIDE — Well-Presented Existing Photo (5 cols desktop) */}
+          {/* RIGHT SIDE — Well-Presented Existing Photo (Beside both paragraphs) */}
           <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
-            <div className="relative group w-full max-w-[310px] sm:max-w-[340px] lg:max-w-[360px]">
+            <div className="relative group w-full max-w-[310px] sm:max-w-[340px] lg:max-w-[370px]">
               
               {/* Subtle ambient backlight glow behind frame */}
-              <div className="absolute -inset-2 bg-gradient-to-tr from-serk-gold/20 via-serk-gold/5 to-transparent rounded-3xl blur-xl opacity-75 pointer-events-none -z-10"></div>
+              <div className="absolute -inset-2.5 bg-gradient-to-tr from-serk-gold/20 via-serk-gold/5 to-transparent rounded-3xl blur-xl opacity-75 pointer-events-none -z-10"></div>
 
               {/* Gallery Matte Frame with Refined Double Border and Balanced Portrait Proportions */}
               <div className="relative p-2 sm:p-2.5 rounded-[22px] bg-gradient-to-b from-[#0F352E]/90 via-[#0B2A24]/90 to-[#081F1B]/95 border border-serk-gold/30 hover:border-serk-gold/50 shadow-[0_20px_45px_rgba(0,0,0,0.65),0_0_25px_rgba(200,169,126,0.08)] transition-all duration-500">
@@ -61,13 +69,6 @@ export default function BrandStory({ t, lang, onOpenModal }) {
             </div>
           </div>
 
-        </div>
-
-        {/* BELOW THE FIRST ROW: SECOND PARAGRAPH SPANNING THE SECTION WIDTH */}
-        <div className="w-full text-left pt-1">
-          <p className="text-[#FDF3E5]/85 text-base sm:text-lg leading-relaxed font-light">
-            {t.brandStory.p2}
-          </p>
         </div>
 
         {/* 3 Core Value Pillars (Clean, balanced 3-column row spanning section width) */}
