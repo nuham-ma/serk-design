@@ -21,8 +21,8 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', '"Playfair Display"', 'serif'],
-        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        serif: ['"Cormorant Garamond"', '"Playfair Display"', '"Noto Sans Ethiopic"', '"Abyssinica SIL"', 'serif'],
+        sans: ['"Plus Jakarta Sans"', '"Noto Sans Ethiopic"', 'sans-serif'],
         ethiopic: ['"Noto Sans Ethiopic"', '"Abyssinica SIL"', 'sans-serif'],
       },
       backgroundImage: {

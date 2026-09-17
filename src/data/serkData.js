@@ -203,27 +203,27 @@ export const content = {
     pillarsSection: {
       eyebrow: "አገልግሎቶች",
       title: "በሰርክ ዲዛይን የሚዘጋጁ ስብስቦች",
-      subtitle: "እያንዳንዱ ስራ በሜሮን የንድፍ ፈጠራና በተዋጣለት የልብስ ጥበብ የተዘጋጀ ነው።",
+      subtitle: "እያንዳንዱ ስብስብ እንከን የለሽ የስፌት ጥበብን፣ የአገር በቀል ጨርቆችን እና ዘመናዊ ውበትን ያንጸባርቃል።",
       exploreBtn: "ስብስቦችን በሙሉ ይመልከቱ",
       cards: [
         {
           title: "የሰርግና የክብር ቀሚሶች",
           desc: "ለሙሽሮች፣ ለሚዜዎችና ለደማቅ ክብረ በዓላት በወርቅና በብር ጥበብ የተዋቡ፣ በከፍተኛ ጥራት በእጅ የሚሰፉ ክላሲክና ዘመናዊ የሀበሻ ቀሚሶች።",
-          image: "/images/fashion/kemis_event_ivory_gold.jpg",
+          image: "/images/fashion/kemis_gold_tilet_studio.jpg",
           category: "bridal",
           badge: "የሰርግ",
         },
         {
           title: "ዘመናዊ የባህል ውህደት",
           desc: "የኢትዮጵያን ባህላዊ የሽመና ጥበብ ከዘመናዊው ፋሽን ጋር ያጣመሩ ልዩ የንድፍ ስራዎች፣ ኮርሴትና ዘመናዊ የባህል ውህደት አልባሳት።",
-          image: "/images/fashion/fusion_trousers_gold_cape_robe.jpg",
+          image: "/images/fashion/kemis_highlow_train_couture.jpg",
           category: "fusion",
           badge: "ዘመናዊ ውህደት",
         },
         {
           title: "የወንዶችና የጥንዶች አልባሳት",
           desc: "ለሙሽሮችና ለተጣማሪዎች የተዘጋጁ ተዛማጅ የሰርግ ልብሶች፣ በእጅ የተጠለፉ የወንዶች ባህላዊ ሸሚዞችና የክብር አልባሳት።",
-          image: "/images/fashion/couples_attire_cultural.jpg",
+          image: "/images/fashion/couples_purple_kemis_matching.jpg",
           category: "men",
           badge: "የወንዶችና ጥንዶች",
         }
@@ -355,21 +355,21 @@ export const content = {
         {
           title: "Bridal & Celebration Kemis",
           desc: "Magnificent bespoke Habesha Kemis tailored for brides, bridal parties, and festive celebrations, adorned with handcrafted gold and silver tilet embroidery.",
-          image: "/images/fashion/kemis_event_ivory_gold.jpg",
+          image: "/images/fashion/kemis_gold_tilet_studio.jpg",
           category: "bridal",
           badge: "Bridal",
         },
         {
           title: "Modern Cultural Fusion",
           desc: "Avant-garde couture blending authentic Ethiopian handwoven textures with contemporary silhouettes, including corseted waistcoats, high-low trains, and royal cape sets.",
-          image: "/images/fashion/fusion_trousers_gold_cape_robe.jpg",
+          image: "/images/fashion/kemis_highlow_train_couture.jpg",
           category: "fusion",
           badge: "Modern Fusion",
         },
         {
           title: "Men's & Couple's Attire",
           desc: "Harmonized wedding couple ensembles, bespoke cultural bride & groom pairings, and custom men's cultural shirts adorned with traditional cross motifs.",
-          image: "/images/fashion/couples_attire_cultural.jpg",
+          image: "/images/fashion/couples_purple_kemis_matching.jpg",
           category: "men",
           badge: "Men & Couples",
         }
@@ -380,7 +380,7 @@ export const content = {
       title: "Curated Serk Creations",
       subtitle: "A showcase of signature designs; tap any photograph to inspect intricate details in high resolution.",
       filterAll: "All Designs",
-      filterBridal: "Bridal & Kemis",
+      filterBridal: "Wedding Dresses",
       filterFusion: "Modern Fusion",
       filterMen: "Men & Couples",
       viewDetails: "View Fullscreen",

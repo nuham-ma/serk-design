@@ -45,7 +45,7 @@ export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, 
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex items-center justify-center overflow-x-auto no-scrollbar gap-2 mb-12 pb-1">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 px-2">
           {filterTabs.map(tab => (
             <button
               key={tab.key}
@@ -54,10 +54,10 @@ export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, 
                 setFilter(tab.key);
                 if (setActiveCategory) setActiveCategory(tab.key);
               }}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium shrink-0 transition-all ${
+              className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all text-center whitespace-normal ${
                 filter === tab.key
                   ? 'bg-serk-gold text-[#08221D] font-bold shadow-md'
-                  : 'bg-[#0D2F28] text-[#FDF3E5]/75 hover:text-[#FDF3E5] border border-serk-border hover:border-serk-gold/40'
+                  : 'bg-[#0D2F28] text-[#FDF3E5]/80 hover:text-[#FDF3E5] border border-serk-border hover:border-serk-gold/40'
               }`}
             >
               {tab.label}

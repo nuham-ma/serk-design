@@ -28,7 +28,7 @@ export default function Hero({ t, lang, onOpenModal }) {
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FDF3E5] leading-[1.15]">
               <span>{t.hero.titleStart} </span>
-              <span className="text-serk-gold-gradient font-serif italic font-normal underline decoration-serk-gold/30 decoration-wavy decoration-1 underline-offset-8">
+              <span className={`text-serk-gold-gradient ${lang === 'am' ? 'not-italic font-sans inline-block pr-1.5' : 'font-serif italic font-normal'} underline decoration-serk-gold/30 decoration-wavy decoration-1 underline-offset-8`}>
                 {t.hero.titleHighlight}
               </span>
               <br className="hidden sm:inline" />

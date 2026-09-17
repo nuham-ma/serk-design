@@ -26,6 +26,14 @@
     letter-spacing: 0.015em;
   }
 
+  html[lang="am"] .font-serif, [lang="am"] .font-serif {
+    font-family: 'Noto Sans Ethiopic', 'Abyssinica SIL', sans-serif;
+  }
+
+  html[lang="am"] .italic, [lang="am"] .italic {
+    font-style: normal;
+  }
+
   /* Custom subtle scrollbar */
   ::-webkit-scrollbar {
     width: 7px;
