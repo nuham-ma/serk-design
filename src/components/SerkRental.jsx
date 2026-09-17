@@ -135,8 +135,8 @@ export default function SerkRental({ t, lang, onOpenModal }) {
           {/* Right Column: Compact, Non-Cropped Auto-Scrolling Carousel (5 cols) */}
           <div className="lg:col-span-5 relative w-full">
             
-            {/* Compact Carousel Frame - Photo fully covers and fills the frame horizontally with zero side space */}
-            <div className="relative w-full max-w-[290px] sm:max-w-[310px] mx-auto rounded-2xl overflow-hidden border border-serk-gold/40 shadow-xl bg-[#051815] h-[380px] sm:h-[420px] max-h-[420px] flex items-center justify-center">
+            {/* Wider Carousel Frame - Extends wider from left to right while keeping same height */}
+            <div className="relative w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[440px] mx-auto rounded-2xl overflow-hidden border border-serk-gold/40 shadow-xl bg-[#051815] h-[380px] sm:h-[420px] max-h-[420px] flex items-center justify-center">
               
               {rentalImages.map((img, idx) => {
                 const isActive = idx === currentIndex;
@@ -155,11 +155,11 @@ export default function SerkRental({ t, lang, onOpenModal }) {
                       category: 'rental'
                     })}
                   >
-                    {/* Full Photo reaches left and right edges horizontally - zero empty space, zero distortion */}
+                    {/* Full Photo reaches left and right edges horizontally - wider side-to-side */}
                     <img
                       src={img.src}
                       alt={img.title}
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102"
+                      className="w-full h-full object-cover object-center scale-[1.04] transition-transform duration-500 group-hover:scale-108"
                     />
 
                     {/* Subtle Top Badge */}
@@ -192,7 +192,7 @@ export default function SerkRental({ t, lang, onOpenModal }) {
             </div>
 
             {/* Compact Caption Bar & Dots Below Carousel */}
-            <div className="mt-3 max-w-[290px] sm:max-w-[310px] mx-auto px-1 flex items-center justify-between">
+            <div className="mt-3 max-w-[360px] sm:max-w-[400px] lg:max-w-[440px] mx-auto px-1 flex items-center justify-between">
               <div className="min-w-0 pr-2">
                 <span className="text-[10px] font-mono text-serk-gold uppercase tracking-wider font-bold block truncate">
                   SERK RENTAL • {rentalImages[currentIndex].tag}
