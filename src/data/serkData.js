@@ -4,7 +4,7 @@ export const verifiedSocials = {
   tiktok: "https://vm.tiktok.com/ZS9BqV9pWhcr1-RtHPD/",
   phone: "+251 93 417 9992",
   phoneRaw: "+251934179992",
-  googleMapsUrl: "https://www.google.com/maps?q=9.010025,38.788004+(Serk+Design+by+Meron)",
+  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Bama+City+Mall+Addis+Ababa",
   locationName: {
     am: "22 ከጎላጉል ወደ ቦሌ መንገድ አውራሪስ ሆቴል ሳደርሱ ባማ ሲቲ ሞል 209፣ አዲስ አበባ",
     en: "22 Golagul to Bole Road, near Awraris Hotel, Bama City Mall #209, Addis Ababa",
@@ -18,8 +18,8 @@ export const verifiedSocials = {
 export const lookbookItems = [
   // 1. Bridal
   {
-    id: "hero_emerald_gown",
-    image: "/images/fashion/hero_emerald_gown.jpg",
+    id: "kemis_emerald_gold_flare",
+    image: "/images/fashion/kemis_emerald_gold_flare.jpg",
     category: "bridal",
     title: {
       am: "ኤመራልድ ግሪንና ወርቅ ፍሌር ቀሚስ",
@@ -48,8 +48,8 @@ export const lookbookItems = [
   },
   // 3. Fusion
   {
-    id: "hero_portrait_highres",
-    image: "/images/fashion/hero_portrait_highres.jpg",
+    id: "kemis_olive_corset_duotone",
+    image: "/images/fashion/kemis_olive_corset_duotone.jpg",
     category: "fusion",
     title: {
       am: "ኦሊቭ ኮርሴት ዘመናዊ የሀበሻ ቀሚስ",

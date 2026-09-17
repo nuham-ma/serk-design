@@ -114,7 +114,7 @@ export default function BoutiqueVisit({ t, lang }) {
               href={verifiedSocials.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-between text-sm font-bold text-serk-gold hover:underline pt-3 border-t border-serk-border"
+              className="inline-flex items-center justify-between text-sm sm:text-base font-bold text-serk-gold hover:underline pt-3 border-t border-serk-border"
             >
               <span>{t.visit.telegramBtn}</span>
               <ExternalLink size={15} />

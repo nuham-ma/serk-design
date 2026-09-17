@@ -20,6 +20,12 @@
     overflow-x: hidden;
   }
 
+  /* Amharic typography: comfortable, natural word spacing for optimal readability */
+  html[lang="am"], [lang="am"] {
+    word-spacing: 0.14em;
+    letter-spacing: 0.015em;
+  }
+
   /* Custom subtle scrollbar */
   ::-webkit-scrollbar {
     width: 7px;

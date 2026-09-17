@@ -133,15 +133,15 @@ export default function SerkRental({ t, lang, onOpenModal }) {
           {/* Right Column: Larger Visual Impact Auto-Scrolling Carousel (7 cols) */}
           <div className="lg:col-span-7 relative">
             
-            {/* Main Featured Carousel Display with Large Impact */}
-            <div className="relative rounded-2xl overflow-hidden border-2 border-serk-gold/35 shadow-2xl bg-[#0D2F28] aspect-[3/3.8] sm:aspect-[4/4]">
+            {/* Main Featured Carousel Display with Non-Cropped Full Photo Visibility */}
+            <div className="relative rounded-2xl overflow-hidden border-2 border-serk-gold/35 shadow-2xl bg-[#051815] aspect-[3/4] sm:aspect-[3/4.2] flex items-center justify-center">
               
               {rentalImages.map((img, idx) => {
                 const isActive = idx === currentIndex;
                 return (
                   <div
                     key={img.id}
-                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out cursor-pointer group ${
+                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out cursor-pointer group flex items-center justify-center ${
                       isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
                     }`}
                     onClick={() => onOpenModal({
@@ -156,7 +156,7 @@ export default function SerkRental({ t, lang, onOpenModal }) {
                     <img
                       src={img.src}
                       alt={img.title}
-                      className="w-full h-full object-cover object-top group-hover:scale-104 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-contain object-center transition-transform duration-700 ease-out"
                     />
 
                     {/* Very subtle bottom gradient for title clarity (Requirement 9) */}

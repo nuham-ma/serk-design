@@ -10,7 +10,7 @@ export default function SocialProof({ t }) {
   };
 
   return (
-    <section id="social" className="py-22 bg-[#08221D] relative overflow-hidden border-t border-b border-serk-border">
+    <section id="social" className="py-24 sm:py-32 bg-[#08221D] relative overflow-hidden border-t border-b border-serk-border">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         

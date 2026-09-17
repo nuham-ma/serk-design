@@ -89,9 +89,6 @@ export default function LookbookGallery({ t, lang, onOpenModal, activeCategory, 
                   loading={index < 3 ? "eager" : "lazy"}
                 />
 
-                {/* Minimal subtle gradient limited to the bottom 10% */}
-                <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#0D2F28]/60 to-transparent"></div>
-
                 {/* Floating Badge */}
                 <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#08221D]/90 backdrop-blur-md border border-serk-gold/40 text-xs uppercase font-bold text-serk-gold tracking-wider shadow">
                   {item.badge[lang]}

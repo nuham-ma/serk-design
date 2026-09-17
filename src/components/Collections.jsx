@@ -37,10 +37,7 @@ export default function Collections({ t, lang, onSelectCategory }) {
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
-                
-                {/* Very subtle gradient limited only to the very bottom 10% */}
-                <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#0D2F28]/60 to-transparent"></div>
-                
+
                 {/* Localized Category Pill (Requirement 8) */}
                 <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#08221D]/90 backdrop-blur-md border border-serk-gold/40 text-xs uppercase font-bold text-serk-gold tracking-wider shadow-sm">
                   {card.badge || card.category}
