@@ -62,11 +62,12 @@ export default function Hero({ t, lang, onOpenModal }) {
 
               <a
                 href={`tel:${verifiedSocials.phoneRaw}`}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-[#08221D] border border-serk-border text-serk-gold text-sm font-mono font-bold hover:border-serk-gold transition-colors"
+                dir="ltr"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-[#08221D] border border-serk-border text-serk-gold text-sm font-mono font-bold hover:border-serk-gold transition-colors whitespace-nowrap tabular-nums"
                 title="Call hotline"
               >
                 <Phone size={15} />
-                <span>{verifiedSocials.phone}</span>
+                <span dir="ltr">{verifiedSocials.phone}</span>
               </a>
             </div>
 

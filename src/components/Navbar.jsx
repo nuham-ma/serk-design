@@ -206,7 +206,9 @@ export default function Navbar({ lang, setLang, t }) {
           <div className="pt-3 border-t border-serk-border grid grid-cols-2 gap-2.5">
             <a
               href={`tel:${verifiedSocials.phoneRaw}`}
-              className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#0D2F28] border border-serk-gold/40 text-serk-gold text-sm font-mono font-bold"
+              dir="ltr"
+              className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#0D2F28] border border-serk-gold/40 text-serk-gold text-sm font-mono font-bold whitespace-nowrap tabular-nums"
+              title={`Call: ${verifiedSocials.phone}`}
             >
               <Phone size={15} />
               <span>{lang === 'am' ? 'ይደውሉ' : 'Call'}</span>

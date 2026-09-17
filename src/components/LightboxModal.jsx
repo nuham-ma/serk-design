@@ -111,10 +111,12 @@ export default function LightboxModal({ item, onClose, lang }) {
 
             <a
               href={`tel:${verifiedSocials.phoneRaw}`}
-              className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#08221D] border border-serk-border text-serk-gold text-xs font-mono font-medium hover:border-serk-gold transition-colors"
+              dir="ltr"
+              className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#08221D] border border-serk-border text-serk-gold text-xs font-mono font-medium hover:border-serk-gold transition-colors whitespace-nowrap tabular-nums"
+              title="Call Serk Design"
             >
               <Phone size={14} />
-              <span>{verifiedSocials.phone}</span>
+              <span dir="ltr">{verifiedSocials.phone}</span>
             </a>
           </div>
 

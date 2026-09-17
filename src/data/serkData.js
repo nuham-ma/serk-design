@@ -46,7 +46,7 @@ export const lookbookItems = [
     },
     badge: { am: "የጥንዶች", en: "Couples" }
   },
-  // 3. Fusion
+  // 3. Fusion 1
   {
     id: "kemis_olive_corset_duotone",
     image: "/images/fashion/kemis_olive_corset_duotone.jpg",
@@ -61,22 +61,7 @@ export const lookbookItems = [
     },
     badge: { am: "ኮውቸር", en: "Couture" }
   },
-  // 4. Fusion (Main Image kept per requirement 10)
-  {
-    id: "editorial_dramatic_habesha_wrap",
-    image: "/images/fashion/editorial_dramatic_habesha_wrap.jpg",
-    category: "fusion",
-    title: {
-      am: "ልዩ የባህል ጥልፍ ድሪፕ",
-      en: "Dramatic Handwoven Habesha Wrap",
-    },
-    subtitle: {
-      am: "በወርቃማና አረንጓዴ ጥበብ የተዋበ ማራኪ የንድፍ ስራ",
-      en: "Editorial drape adorned with intricate gold and emerald tilet",
-    },
-    badge: { am: "ፊርማ ዲዛይን", en: "Signature" }
-  },
-  // 5. Fusion
+  // 4. Fusion 2 (Two photos total for Modern Fusion)
   {
     id: "fusion_trousers_gold_cape_robe",
     image: "/images/fashion/fusion_trousers_gold_cape_robe.jpg",
@@ -223,7 +208,7 @@ export const content = {
         {
           title: "የወንዶችና የጥንዶች አልባሳት",
           desc: "ለሙሽሮችና ለተጣማሪዎች የተዘጋጁ ተዛማጅ የሰርግ ልብሶች፣ በእጅ የተጠለፉ የወንዶች ባህላዊ ሸሚዞችና የክብር አልባሳት።",
-          image: "/images/fashion/couples_purple_kemis_matching.jpg",
+          image: "/images/fashion/couples_attire_cultural.jpg",
           category: "men",
           badge: "የወንዶችና ጥንዶች",
         }
@@ -369,7 +354,7 @@ export const content = {
         {
           title: "Men's & Couple's Attire",
           desc: "Harmonized wedding couple ensembles, bespoke cultural bride & groom pairings, and custom men's cultural shirts adorned with traditional cross motifs.",
-          image: "/images/fashion/couples_purple_kemis_matching.jpg",
+          image: "/images/fashion/couples_attire_cultural.jpg",
           category: "men",
           badge: "Men & Couples",
         }

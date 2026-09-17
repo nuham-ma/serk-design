@@ -70,15 +70,25 @@ export default function BoutiqueVisit({ t, lang }) {
           {/* Card 2: Direct Phone Hotline starting with +251 (Reference Typography Style) */}
           <div className="bg-[#0D2F28] border border-serk-border hover:border-serk-gold/70 rounded-2xl p-6 flex flex-col justify-between space-y-5 shadow-xl transition-all hover:-translate-y-1">
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-serk-gold/15 text-serk-gold flex items-center justify-center border border-serk-gold/30 shadow-inner">
-                <Phone size={22} />
-              </div>
+              <a
+                href={`tel:${verifiedSocials.phoneRaw}`}
+                className="w-12 h-12 rounded-xl bg-serk-gold/15 text-serk-gold flex items-center justify-center border border-serk-gold/30 shadow-inner hover:bg-serk-gold hover:text-[#08221D] transition-all cursor-pointer group"
+                title={t.visit.phoneTitle}
+                aria-label={t.visit.phoneTitle}
+              >
+                <Phone size={22} className="group-hover:scale-110 transition-transform" />
+              </a>
               <h3 className="text-lg sm:text-xl font-bold font-serif text-[#FDF3E5]">
                 {t.visit.phoneTitle}
               </h3>
-              <p className="text-base sm:text-lg font-mono font-bold text-serk-gold leading-snug">
+              <a
+                href={`tel:${verifiedSocials.phoneRaw}`}
+                dir="ltr"
+                className="text-base sm:text-lg font-mono font-bold text-serk-gold leading-snug hover:underline block whitespace-nowrap"
+                title={t.visit.phoneDesc}
+              >
                 {verifiedSocials.phone}
-              </p>
+              </a>
               <p className="text-sm sm:text-base text-[#FDF3E5]/85 font-light leading-relaxed">
                 {t.visit.phoneDesc}
               </p>

@@ -39,11 +39,12 @@ export default function Footer({ t, lang }) {
             {/* Phone with +251 */}
             <a
               href={`tel:${verifiedSocials.phoneRaw}`}
-              className="inline-flex items-center gap-1.5 text-serk-gold hover:text-serk-goldLight font-mono font-medium text-sm"
+              dir="ltr"
+              className="inline-flex items-center gap-1.5 text-serk-gold hover:text-serk-goldLight font-mono font-medium text-sm whitespace-nowrap tabular-nums"
               title="Call Serk Design"
             >
               <Phone size={14} />
-              <span>{verifiedSocials.phone}</span>
+              <span dir="ltr">{verifiedSocials.phone}</span>
             </a>
 
             <span className="text-serk-border hidden sm:inline">|</span>

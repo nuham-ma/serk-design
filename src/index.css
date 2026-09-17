@@ -34,6 +34,15 @@
     font-style: normal;
   }
 
+  /* Phone number & numeric direction safety: ensure numbers always render strictly LTR in correct digit order without line breaking */
+  [dir="ltr"], a[href^="tel:"], .phone-text {
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+    white-space: nowrap !important;
+    word-spacing: 0 !important;
+    letter-spacing: normal !important;
+  }
+
   /* Custom subtle scrollbar */
   ::-webkit-scrollbar {
     width: 7px;
