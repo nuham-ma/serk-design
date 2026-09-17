@@ -36,13 +36,28 @@ export default function BrandStory({ t, lang, onOpenModal }) {
 
           {/* RIGHT SIDE — Well-Presented Existing Photo (5 cols desktop) */}
           <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
-            <div className="w-full max-w-sm sm:max-w-md lg:max-w-none relative rounded-2xl overflow-hidden border border-serk-gold/35 shadow-2xl bg-[#0D2F28] aspect-[3/3.8] sm:aspect-[3/3.6] lg:aspect-[3/3.5]">
-              <img
-                src="/images/fashion/hero_portrait_highres.jpg"
-                alt="Serk Design Haute Couture"
-                className="w-full h-full object-cover object-top"
-                loading="lazy"
-              />
+            <div className="relative group w-full max-w-[310px] sm:max-w-[340px] lg:max-w-[360px]">
+              
+              {/* Subtle ambient backlight glow behind frame */}
+              <div className="absolute -inset-2 bg-gradient-to-tr from-serk-gold/20 via-serk-gold/5 to-transparent rounded-3xl blur-xl opacity-75 pointer-events-none -z-10"></div>
+
+              {/* Gallery Matte Frame with Refined Double Border and Balanced Portrait Proportions */}
+              <div className="relative p-2 sm:p-2.5 rounded-[22px] bg-gradient-to-b from-[#0F352E]/90 via-[#0B2A24]/90 to-[#081F1B]/95 border border-serk-gold/30 hover:border-serk-gold/50 shadow-[0_20px_45px_rgba(0,0,0,0.65),0_0_25px_rgba(200,169,126,0.08)] transition-all duration-500">
+                
+                {/* Inner Image Container matching natural portrait proportions so the full attire remains visible */}
+                <div className="relative rounded-[16px] overflow-hidden bg-[#0A2621] aspect-[3/4.2] sm:aspect-[3/4.2]">
+                  <img
+                    src="/images/fashion/hero_portrait_highres.jpg"
+                    alt="Serk Design Haute Couture"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                    loading="lazy"
+                  />
+
+                  {/* Refined subtle inner rim highlight */}
+                  <div className="absolute inset-0 rounded-[16px] ring-1 ring-inset ring-serk-gold/20 pointer-events-none"></div>
+                </div>
+
+              </div>
             </div>
           </div>
 
